@@ -9,7 +9,7 @@ import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 
-import satNaing from "../public/satnaing.webp";
+import Mostafa from "../public/Avatar.png";
 import AboutBgSvg from "@/components/AboutBgSvg";
 import EduGroup from "@/components/EduGroup";
 
@@ -109,9 +109,8 @@ const AboutSection: React.FC = () => {
           <div className="text-center">
             <RoughNotation
               type="underline"
-              color={`${
-                theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
-              }`}
+              color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
+                }`}
               strokeWidth={2}
               order={1}
               show={isSecOnScreen}
@@ -119,8 +118,9 @@ const AboutSection: React.FC = () => {
               <h2 className="section-heading">Who am I?</h2>
             </RoughNotation>
           </div>
-          <div className="md:grid grid-rows-5 lg:grid-rows-6 grid-cols-5">
-            <div className="col-start-1 col-end-3 row-start-1 row-end-4 lg:row-end-7 lg:col-start-1 lg:col-end-3 flex justify-center items-center py-4 lg:mb-[20%]">
+          <div className="md:flex md:gap-8 lg:gap-12">
+            {/* Profile Picture Section */}
+            <div className="md:w-1/2 lg:w-2/5 flex justify-center items-start py-4">
               <div className="relative w-72">
                 <svg
                   width="96"
@@ -135,11 +135,11 @@ const AboutSection: React.FC = () => {
 
                 <div className="profile-picture overflow-hidden md:overflow-visible rounded-md md:shadow-2xl">
                   <Image
-                    src={satNaing}
+                    src={Mostafa}
                     width={1700}
                     height={1790}
                     priority
-                    alt="Sat Naing profile picture"
+                    alt="Mostafa profile picture"
                     className="rounded-md"
                   />
                 </div>
@@ -167,24 +167,25 @@ const AboutSection: React.FC = () => {
                 </svg>
               </div>
             </div>
-
-            <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
-              With 4+ years of comprehensive experience in web application
-              development, I have polished my skills in both frontend and
-              backend development. In addition to my hands-on experience in web
-              development, my education has also played a critical role in
-              providing a strong foundation for my career.
+            <div className="md:w-1/2 lg:w-3/5 space-y-6">
+            <p className="about-intro">
+              DevOps Engineer and Backend Developer with skills in Python, Linux,
+              Docker, and cloud infrastructure. Experienced with CI/CD pipelines, version
+              control, and database management. Familiar with AWS, Digital Ocean, and
+              Azure. Currently learning Terraform and Kubernetes.
+              <br />
+              Known for problem-solving, adaptability, and a collaborative mindset in cross-functional teams.
+              <br />
+              Seeking junior-level opportunities in Europe to apply technical skills while growing professionally.
             </p>
 
-            <div
-              className="col-start-3 col-end-6 row-start-1 row-end-6 lg:row-start-2 lg:row-end-7 md:ml-8 place-content-end"
-              ref={eduRef}
-            >
+            <div ref={eduRef}>
               <p className="edu-bg my-4">Here is my educational background.</p>
               {educationInfo.map((edu) => (
                 <EduGroup edu={edu} key={edu.id} />
               ))}
             </div>
+          </div>
           </div>
         </RoughNotationGroup>
       </section>
@@ -197,28 +198,29 @@ const AboutSection: React.FC = () => {
 const educationInfo = [
   {
     id: 1,
-    title: "B.Sc (Hons) in Computing",
-    subTitle: "Edinburgh Napier University | 2018 ~ 2019",
+    title: "B.Sc. Computer Engineering",
+    subTitle: "Politecnico Di Torino (PoliTo) | 2022 ~ Present",
     list: [
-      "Studied computer science, software development, DevOps",
-      "Graduated with First Class Honours",
-      "Got merit in 7 modules out of 9",
+      "Coursework in programming, computer systems, and software engineering",
+      "Focus on DevOps, backend development, and cloud technologies",
+      "Studying in Torino, Italy",
     ],
   },
   {
     id: 2,
-    title: "HND in Computing & System Development",
-    subTitle: "Info Myanmar University | 2016 - 2018",
+    title: "B.Sc. Mining Engineering",
+    subTitle: "University Of Tehran (UT) | 2017 - 2021",
     list: [
-      "Studied modules specializing in software development",
-      "Passed HND with overall Merit",
+      "Studied foundational engineering, programming, and project management",
+      "Developed resilience and problem-solving skills in challenging field environments",
+      "Developed strong teamwork, communication, and patience by collaborating with diverse groups of people",
     ],
   },
   {
     id: 3,
-    title: "IELTS",
-    subTitle: "British Council Myanmar | 2017",
-    list: ["Got overall band score 6.5."],
+    title: "Languages",
+    subTitle: "English, Persian, and Italian",
+    list: ["Persian – Native", "English – Fluent (C1), IELTS 7", "Italian – Basic (A1)"],
   },
 ];
 
