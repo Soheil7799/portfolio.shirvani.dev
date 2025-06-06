@@ -124,12 +124,12 @@ const HeroSection: React.FC = () => {
         </span>
         <div className="overflow-hidden">
           <h1 className="text-animation text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1">
-            Sat Naing
+            Mostafa Shirvani
           </h1>
         </div>
         <div className="overflow-hidden">
-          <span className="text-animation text-2xl md:text-3xl lg:text-5xl block md:my-3 text-marrsgreen dark:text-carrigreen font-medium">
-            A Full-stack Developer
+          <span className="text-animation text-xl md:text-2xl lg:text-4xl block md:my-3 text-marrsgreen dark:text-carrigreen font-medium">
+            A DevOps / Backend Developer
           </span>
         </div>
         <div className="mt-2 my-4 md:mb-8">
@@ -138,13 +138,11 @@ const HeroSection: React.FC = () => {
             exceptional results.
           </p>
           <p>
-            With my expertise in React and NextJS on the frontend, and PHP,
-            CodeIgniter, NodeJS, and Express on the backend, I bring a unique
-            combination of technical skills and creative problem-solving to
-            every project I work on.
+            I'm someone who gets excited about solving infrastructure puzzles and building systems that just work. Whether it's containerizing applications,
+             setting up CI/CD pipelines, or optimizing server performance, I enjoy making technology serve people better.
           </p>
         </div>
-        <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+        <LinkButton href={`#contact`}>
           Contact me!
         </LinkButton>
       </div>
