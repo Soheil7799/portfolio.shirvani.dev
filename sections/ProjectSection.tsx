@@ -8,12 +8,10 @@ import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 
-import terminalPortfolio from "public/projects/terminal-portfolio.webp";
-import haruFashion from "public/projects/haru-fashion.webp";
-import haruApi from "public/projects/haru-api.webp";
-import astroPaper from "public/projects/astro-paper.webp";
-import nextBookstore from "public/projects/next-bookstore.webp";
-import shadcnAdmin from "public/projects/shadcn-admin.webp";
+// You'll need to add these images to your public/projects/ folder
+import mecasProject from "public/projects/mecas-service.webp";
+import portfolioProject from "public/projects/portfolio-site.webp";
+import devopsProject from "public/projects/devops-automation.webp";
 
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
@@ -44,8 +42,8 @@ const ProjectSection: React.FC = () => {
         </RoughNotation>
       </div>
       <span className="project-desc text-center block mb-4" ref={elementRef}>
-        “Talk is cheap. Show me the code”? I got you. <br />
-        Here are some of my projects you shouldn't misss
+        From media processing to deployment automation, <br />
+        here are some projects that showcase my DevOps and development skills
       </span>
       <div className="flex flex-wrap">
         {projects.map((project, index) => (
@@ -53,12 +51,12 @@ const ProjectSection: React.FC = () => {
         ))}
       </div>
       <div className="others text-center mb-16">
-        Other projects can be explored in{" "}
+        More projects and contributions can be found on{" "}
         <a
-          href="https://github.com/satnaing"
+          href="https://github.com/Soheil7799"
           className="font-medium underline link-outline text-marrsgreen dark:text-carrigreen whitespace-nowrap"
         >
-          my github profile
+          my GitHub profile
         </a>
       </div>
     </section>
@@ -67,118 +65,137 @@ const ProjectSection: React.FC = () => {
 
 const projects = [
   {
-    title: "AstroPaper",
-    type: "Frontend",
+    title: "MECAS - Media Conversion Service",
+    type: "Backend + DevOps",
     image: (
       <Image
-        src={astroPaper}
+        src={mecasProject}
         sizes="100vw"
         fill
-        alt="AstroPaper"
+        alt="MECAS Media Conversion Service"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme. One of the most starred blog templates built with Astro.",
-    tags: ["Astro", "TypeScript", "React", "TailwindCSS"],
-    liveUrl: "https://astro-paper.pages.dev/",
-    codeUrl: "https://github.com/satnaing/astro-paper",
+    desc: "FastAPI-based REST API backend service for multimedia conversion and storage, supporting 5+ file formats with asynchronous processing and Docker containerization.",
+    tags: ["Python", "FastAPI", "FFmpeg", "Docker", "GitHub Actions", "AWS"],
+    liveUrl: "", // Add if you have a demo
+    codeUrl: "https://github.com/Soheil7799/mecas-service",
     bgColor: "bg-[#9FD0E3]",
-    githubApi: "https://api.github.com/repos/satnaing/astro-paper",
+    githubApi: "https://api.github.com/repos/Soheil7799/mecas-service",
   },
   {
-    title: "Terminal Portfolio",
-    type: "Frontend",
+    title: "DevOps Practice Projects",
+    type: "CI/CD + Backend",
     image: (
       <Image
-        src={terminalPortfolio}
+        src={devopsProject}
         sizes="100vw"
         fill
-        alt="Terminal Portfolio"
+        alt="DevOps Practice Projects"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "My portfolio website in terminal version developed with React and TypeScript. ",
-    tags: ["React", "TypeScript", "Styled-Components"],
-    liveUrl: "https://terminal.satnaing.dev/",
-    codeUrl: "https://github.com/satnaing/terminal-portfolio",
-    bgColor: "bg-[#B4BEE0]",
-    githubApi: "https://api.github.com/repos/satnaing/terminal-portfolio",
+    desc: "Collection of backend services with CI/CD pipelines, database management, and cloud deployment practices using modern DevOps tools and methodologies.",
+    tags: ["Node.js", "MongoDB", "Jenkins", "GitHub Actions", "Express.js"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799",
+    bgColor: "bg-[#10b981]", // Green background like your card
+    githubApi: "https://api.github.com/repos/Soheil7799",
   },
   {
-    title: "Haru Fashion",
-    type: "Frontend",
+    title: "Portfolio Website",
+    type: "Frontend + Deployment",
     image: (
       <Image
-        src={haruFashion}
+        src={portfolioProject}
         sizes="100vw"
         fill
-        alt="Haru Fashion App"
+        alt="Portfolio Website"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "An ecommerce web application where users can browse various products, add to wishlist, add to cart, and make purchase. Available in English and Burmese languages.",
-    tags: ["NextJS", "TypeScript", "TailwindCSS", "ContextAPI"],
-    liveUrl: "https://haru-fashion.vercel.app/",
-    codeUrl: "https://github.com/satnaing/haru-fashion",
+    desc: "Personal portfolio website built with Hugo static site generator and deployed on GitHub Pages. Features responsive design, YAML configuration, and modern web practices.",
+    tags: ["Hugo", "YAML", "GitHub Pages", "Responsive Design", "Static Site"],
+    liveUrl: "https://portfolio.shirvani.dev",
+    codeUrl: "https://github.com/Soheil7799/portfolio.shirvani.dev",
+    bgColor: "bg-[#8b5cf6]", // Purple background like your card
+    githubApi: "https://api.github.com/repos/Soheil7799/portfolio.shirvani.dev",
+  },
+  {
+    title: "DevOps Automation Scripts",
+    type: "DevOps + Infrastructure",
+    image: (
+      <Image
+        src={devopsProject}
+        sizes="100vw"
+        fill
+        alt="DevOps Automation"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "Collection of automation scripts and configurations for CI/CD pipelines, Docker deployments, and Linux system administration. Reduced deployment time by 90%.",
+    tags: ["Bash", "Docker", "Jenkins", "GitHub Actions", "Linux"],
+    liveUrl: "", // Add if you have documentation
+    codeUrl: "https://github.com/Soheil7799", // Link to your main profile or specific repo
     bgColor: "bg-[#A6CECE]",
-    githubApi: "https://api.github.com/repos/satnaing/haru-fashion",
+    githubApi: "https://api.github.com/repos/Soheil7799", // You might need to adjust this
   },
   {
-    title: "Haru API",
+    title: "RESTful API with Node.js",
     type: "Backend",
     image: (
       <Image
-        src={haruApi}
+        src={mecasProject} // Reuse or create a new image
         sizes="100vw"
         fill
-        alt="Haru API"
+        alt="Node.js REST API"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "A RESTful API developed for Haru fashion ecommerce project. Include CRUD operations, authentication, authorization, forgot/reset password and full-text search.",
-    tags: ["ExpressJS", "TypeScript", "PostgreSQL", "Prisma"],
-    liveUrl: "https://satnaing.github.io/haru-api/",
-    codeUrl: "https://github.com/satnaing/haru-api",
+    desc: "RESTful APIs built with Node.js and Express.js featuring 4 key endpoints for data management, integrated with MongoDB using Mongoose with 3 main collections.",
+    tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "REST API"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799", // Update with actual repo
     bgColor: "bg-[#C5E4E7]",
-    githubApi: "https://api.github.com/repos/satnaing/haru-api",
+    githubApi: "https://api.github.com/repos/Soheil7799", // Update with actual repo
   },
   {
-    title: "Next Bookstore",
-    type: "Frontend + HeadlessCMS",
+    title: "Database Design Projects",
+    type: "Database + Backend",
     image: (
       <Image
-        src={nextBookstore}
+        src={portfolioProject} // Reuse or create a new image
         sizes="100vw"
         fill
-        alt="Next Bookstore"
+        alt="Database Design"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "An online bookstore developed using NextJS 13 with appDir and StrapiCMS.",
-    tags: ["NextJS", "Radix UI ", "TailwindCSS", "TanstackQuery", "StrapiCMS"],
-    liveUrl: "https://nextbookstore.vercel.app/",
-    codeUrl: "https://github.com/satnaing/next-bookstore",
+    desc: "Relational database design projects using PostgreSQL with proper normalization techniques. Includes data modeling and optimization across multiple academic projects.",
+    tags: ["PostgreSQL", "SQL", "Database Design", "Data Modeling"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799", // Update with actual repo
     bgColor: "bg-[#EBF4F4]",
-    githubApi: "https://api.github.com/repos/satnaing/next-bookstore",
+    githubApi: "https://api.github.com/repos/Soheil7799", // Update with actual repo
   },
   {
-    title: "Shadcn Admin",
-    type: "Backend",
+    title: "Learning: Terraform & Kubernetes",
+    type: "Infrastructure + Learning",
     image: (
       <Image
-        src={shadcnAdmin}
+        src={devopsProject} // Reuse or create a new image
         sizes="100vw"
         fill
-        alt="Shadcn Admin"
+        alt="Terraform Kubernetes Learning"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Admin Dashboard UI built with Shadcn and Vite. Built with responsiveness and accessibility in mind.",
-    tags: ["ShadcnUI", "Vite", "React Router", "TypeScript"],
-    liveUrl: "https://shadcn-admin.netlify.app/",
-    codeUrl: "https://github.com/satnaing/shadcn-admin",
+    desc: "Current learning projects focused on Infrastructure as Code with Terraform and container orchestration with Kubernetes. Building practical skills for cloud infrastructure management.",
+    tags: ["Terraform", "Kubernetes", "Infrastructure as Code", "Cloud"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799", // Update when you create learning repos
     bgColor: "bg-[#FBFBFB]",
-    githubApi: "https://api.github.com/repos/satnaing/shadcn-admin",
+    githubApi: "https://api.github.com/repos/Soheil7799", // Update when you create learning repos
   },
 ];
 
