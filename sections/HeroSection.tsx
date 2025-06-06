@@ -5,8 +5,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import LinkButton from "../components/LinkButton";
 
-import satNaing from "../public/satnaing-illustration.webp";
-import laptop from "../public/laptop-illustration.webp";
+import terminalDevops from "../public/terminal-devops-illustration.svg";
+import devopsTools from "../public/devops-tools-illustration.svg";
 
 const HeroSection: React.FC = () => {
   const sectionRef = useRef(null);
@@ -90,29 +90,29 @@ const HeroSection: React.FC = () => {
         aria-hidden="true"
         className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
       >
-        PASSIONATE PROGRAMMER FREELANCER FULL-STACK DEVELOPER
+        DEVOPS ENGINEER AUTOMATION INFRASTRUCTURE PYTHON DOCKER KUBERNETES
       </span>
 
       <div className="image-animation z-10 select-none mt-0 xs:mt-6 sm:mt-14 lg:mt-0 px-0 mx-auto lg:p-0 lg:basis-1/3">
         <div className="relative w-72 md:w-80 h-80 flex items-center mx-auto">
-          <div className="absolute pointer-events-none scale-90 xs:scale-95 mx-auto">
+          <div className="absolute pointer-events-none scale-125 xs:scale-150 mx-auto">
             <Image
-              src={satNaing}
-              width={1177}
-              height={1374}
+              src={terminalDevops}
+              width={600}
+              height={400}
               priority
-              id="character-illustration"
-              aria-label="Sat Naing character illustration levitating with a Macbook"
-              alt="Sat Naing character illustration"
+              id="terminal-illustration"
+              aria-label="DevOps Terminal with commands"
+              alt="DevOps Terminal illustration"
             />
           </div>
-          <div className="laptop absolute top-14 sm:top-16 left-0 scale-[.41] xs:scale-[.45] pointer-events-none">
+          <div className="devops-tools absolute top-14 sm:top-16 left-0 scale-90 xs:scale-110 pointer-events-none">
             <Image
-              src={laptop}
-              width={559}
-              height={386}
+              src={devopsTools}
+              width={450}
+              height={450}
               aria-hidden="true"
-              alt="Laptop illustration"
+              alt="DevOps Tools Stack"
             />
           </div>
         </div>
@@ -139,7 +139,7 @@ const HeroSection: React.FC = () => {
           </p>
           <p>
             I'm someone who gets excited about solving infrastructure puzzles and building systems that just work. Whether it's containerizing applications,
-             setting up CI/CD pipelines, or optimizing server performance, I enjoy making technology serve people better.
+            setting up CI/CD pipelines, or optimizing server performance, I enjoy making technology serve people better.
           </p>
         </div>
         <LinkButton href={`#contact`}>

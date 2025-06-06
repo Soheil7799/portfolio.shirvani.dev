@@ -1,0 +1,102 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0db7ed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a9bd8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="kubernetesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#326ce5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a4db8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3776ab;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5aa0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Docker Container (Main Center) -->
+  <g transform="translate(100, 80)">
+    <rect x="0" y="0" width="100" height="70" rx="8" fill="url(#dockerGrad)" filter="url(#shadow)"/>
+    <rect x="5" y="5" width="90" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+    <text x="50" y="22" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">🐳 Docker</text>
+    
+    <!-- Container blocks -->
+    <rect x="10" y="35" width="25" height="15" rx="2" fill="rgba(255,255,255,0.3)"/>
+    <rect x="40" y="35" width="25" height="15" rx="2" fill="rgba(255,255,255,0.3)"/>
+    <rect x="70" y="35" width="25" height="15" rx="2" fill="rgba(255,255,255,0.3)"/>
+    
+    <text x="50" y="62" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">Containerization</text>
+  </g>
+  
+  <!-- Kubernetes (Top) -->
+  <g transform="translate(120, 20)">
+    <circle cx="30" cy="30" r="25" fill="url(#kubernetesGrad)" filter="url(#shadow)"/>
+    <text x="30" y="25" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle">⎈</text>
+    <text x="30" y="40" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">Kubernetes</text>
+  </g>
+  
+  <!-- Python (Left) -->
+  <g transform="translate(20, 100)">
+    <circle cx="30" cy="30" r="25" fill="url(#pythonGrad)" filter="url(#shadow)"/>
+    <text x="30" y="25" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle">🐍</text>
+    <text x="30" y="40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">Python</text>
+  </g>
+  
+  <!-- Jenkins (Right) -->
+  <g transform="translate(230, 100)">
+    <circle cx="30" cy="30" r="25" fill="#335061" filter="url(#shadow)"/>
+    <text x="30" y="25" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle">⚙️</text>
+    <text x="30" y="40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">Jenkins</text>
+  </g>
+  
+  <!-- GitHub Actions (Bottom Left) -->
+  <g transform="translate(60, 180)">
+    <rect x="0" y="0" width="50" height="35" rx="6" fill="#24292e" filter="url(#shadow)"/>
+    <circle cx="25" cy="12" r="6" fill="#28a745"/>
+    <text x="25" y="28" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">GitHub Actions</text>
+  </g>
+  
+  <!-- AWS (Bottom Right) -->
+  <g transform="translate(170, 180)">
+    <rect x="0" y="0" width="50" height="35" rx="6" fill="#ff9900" filter="url(#shadow)"/>
+    <text x="25" y="15" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle">☁️</text>
+    <text x="25" y="28" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">AWS Cloud</text>
+  </g>
+  
+  <!-- Linux (Bottom Center) -->
+  <g transform="translate(120, 230)">
+    <circle cx="30" cy="30" r="25" fill="#333333" filter="url(#shadow)"/>
+    <text x="30" y="25" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle">🐧</text>
+    <text x="30" y="40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">Linux</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke="#4b5563" stroke-width="2" opacity="0.5">
+    <!-- Docker to surrounding tools -->
+    <line x1="150" y1="80" x2="150" y2="70"/>  <!-- to Kubernetes -->
+    <line x1="100" y1="115" x2="75" y2="115"/> <!-- to Python -->
+    <line x1="200" y1="115" x2="230" y2="115"/> <!-- to Jenkins -->
+    <line x1="130" y1="150" x2="110" y2="180"/>  <!-- to GitHub Actions -->
+    <line x1="170" y1="150" x2="190" y2="180"/>  <!-- to AWS -->
+    <line x1="150" y1="150" x2="150" y2="230"/>  <!-- to Linux -->
+  </g>
+  
+  <!-- Floating particles/dots -->
+  <g fill="#10b981" opacity="0.6">
+    <circle cx="80" cy="60" r="2">
+      <animate attributeName="cy" values="60;50;60" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="70" r="2">
+      <animate attributeName="cy" values="70;80;70" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="200" r="2">
+      <animate attributeName="cy" values="200;190;200" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="200" r="2">
+      <animate attributeName="cy" values="200;210;200" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
