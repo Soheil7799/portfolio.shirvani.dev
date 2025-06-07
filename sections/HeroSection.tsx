@@ -142,9 +142,17 @@ const HeroSection: React.FC = () => {
             setting up CI/CD pipelines, or optimizing server performance, I enjoy making technology serve people better.
           </p>
         </div>
-        <LinkButton href={`#contact`}>
-          Contact me!
-        </LinkButton>
+        <div>
+          <a
+            href="/Mostafa-Shirvani_CV.pdf"
+            download="Mostafa-Shirvani_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-marrsgreen dark:bg-carrigreen text-white dark:text-bgdark font-medium rounded-lg hover:bg-opacity-90 transition-colors"
+          >
+            Download Resume
+          </a>
+        </div>
       </div>
       <a
         href="#whoami"
