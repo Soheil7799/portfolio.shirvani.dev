@@ -9,6 +9,7 @@ import HeroSection from "@/sections/HeroSection";
 import AboutSection from "@/sections/AboutSection";
 import ProjectSection from "@/sections/ProjectSection";
 // import BlogSection from "@/sections/BlogSection";
+import SkillsSection from "@/sections/SkillsSection"; // Add this line
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -46,6 +47,7 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
             <HeroSection />
             <AboutSection />
             <ProjectSection />
+            <SkillsSection /> {/* Add this line */}
             {/* <BlogSection posts={blogPosts} /> */}
             <ContactSection />
           </main>
