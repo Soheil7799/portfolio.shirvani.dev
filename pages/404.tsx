@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <>
       <AppHead
-        title="Sat Naing - A Full-stack Developer"
+        title="Mostafa Shirvani - DevOps/Backend Developer"
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
@@ -32,12 +32,12 @@ const Home: NextPage = () => {
               <LinkButton href="/" outline>
                 Go back Home
               </LinkButton>
-              <Link
+              {/* <Link
                 href="/blog"
                 className="link flex items-center px-4 lg:text-xl hover:underline"
               >
                 Go to Blog
-              </Link>
+              </Link> */}
             </div>
           </div>
           <Footer noPadding />

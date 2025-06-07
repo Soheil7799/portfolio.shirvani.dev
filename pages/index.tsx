@@ -8,7 +8,7 @@ import SocialLinks from "@/components/SocialLinks";
 import HeroSection from "@/sections/HeroSection";
 import AboutSection from "@/sections/AboutSection";
 import ProjectSection from "@/sections/ProjectSection";
-import BlogSection from "@/sections/BlogSection";
+// import BlogSection from "@/sections/BlogSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -21,23 +21,23 @@ type Props = {
 
 export const meta = {
   description:
-    "Sat Naing is a full-stack developer based in Yangon, Myanmar. He is passionate about writing codes and developing web applications to solve real-life challenges.",
-  author: "Sat Naing",
+    "Mostafa Shirvani is a DevOps/Backend developer passionate about infrastructure automation, containerization, and building scalable systems.",
+  author: "Mostafa Shirvani",
   type: "website",
-  ogImage: `${process.env.NEXT_PUBLIC_URL}/satnaing-dev-og-new.png`,
-  siteName: "Sat Naing",
-  imageAlt: "Sat Naing portfolio website",
+  ogImage: `${process.env.NEXT_PUBLIC_URL}/mostafa-shirvani-og.png`,
+  siteName: "Mostafa Shirvani",
+  imageAlt: "Mostafa Shirvani portfolio website",
 };
 
 const Home: NextPage<Props> = ({ blogPosts }) => {
   return (
     <>
       <AppHead
-        title="Sat Naing - A Full-stack Developer"
+        title="Mostafa Shirvani - DevOps/Backend Developer"
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
-      <Loader>SatNaing.dev</Loader>
+      <Loader>Shirvani.dev</Loader>
       <div className="bg-bglight dark:bg-bgdark overflow-hidden">
         <div className="selection:bg-marrsgreen selection:text-bglight dark:selection:bg-carrigreen dark:selection:text-bgdark">
           <SkipToMain />
@@ -46,7 +46,7 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
             <HeroSection />
             <AboutSection />
             <ProjectSection />
-            <BlogSection posts={blogPosts} />
+            {/* <BlogSection posts={blogPosts} /> */}
             <ContactSection />
           </main>
           <SocialLinks page="index" />
