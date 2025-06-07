@@ -59,17 +59,17 @@ const ContactSection: React.FC = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="bg-[#F5F5F5] dark:bg-[#1B2731]"
+      className="section min-h-[700px] text-center"
     >
       <div className="text-center">
         <RoughNotation
           type="underline"
           color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"}`}
-          strokeWidth={2}
+          strokeWidth={3}
           order={1}
           show={isOnScreen}
         >
-          <h2 className="text-2xl inline-block my-6 font-medium">Contact</h2>
+          <h2 className="section-heading">Contact Me</h2>
         </RoughNotation>
       </div>
 

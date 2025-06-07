@@ -57,7 +57,7 @@ const SkillsSection: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="skills" className="section md:px-10 py-16 bg-white dark:bg-bgdark">
+    <section ref={sectionRef} id="skills" className=" md:px-10 py-16 bg-[#F5F5F5] dark:bg-[#1B2731]">
       <div className="text-center mb-12">
         <RoughNotation
           type="underline"
