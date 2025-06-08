@@ -1,0 +1,202 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="uploadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" /> <!-- sky-500 -->
+      <stop offset="100%" style="stop-color:#0369A1;stop-opacity:1" /> <!-- sky-700 -->
+    </linearGradient>
+    <linearGradient id="producerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2DD4BF;stop-opacity:1" /> <!-- teal-400 -->
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" /> <!-- teal-600 -->
+    </linearGradient>
+    <linearGradient id="rabbitGrad" x1="0%" y1="0%" x2="100%" y2="100%"> <!-- For Queues -->
+      <stop offset="0%" style="stop-color:#0284C7;stop-opacity:1" /> <!-- sky-600 -->
+      <stop offset="100%" style="stop-color:#075985;stop-opacity:1" /> <!-- sky-800 -->
+    </linearGradient>
+    <linearGradient id="aiGradBase" x1="0%" y1="0%" x2="100%" y2="100%"> <!-- Base for AI Models -->
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" /> <!-- teal-500 -->
+      <stop offset="100%" style="stop-color:#0F766E;stop-opacity:1" /> <!-- teal-700 -->
+    </linearGradient>
+    <!-- Specific AI Grads can inherit or be slightly varied if needed, using aiGradBase for now -->
+    <linearGradient id="aiGrad1" xlink:href="#aiGradBase"/>
+    <linearGradient id="aiGrad2" xlink:href="#aiGradBase"/>
+    <linearGradient id="aiGrad3" xlink:href="#aiGradBase"/>
+    <linearGradient id="storageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" /> <!-- sky-500 -->
+      <stop offset="100%" style="stop-color:#0369A1;stop-opacity:1" /> <!-- sky-700 -->
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/> <!-- Slightly reduced glow -->
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="500" fill="#0F172A"/> <!-- slate-900 -->
+  
+  <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.3"/> <!-- slate-800 -->
+  </pattern>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  
+  <text x="450" y="40" text-anchor="middle" fill="#E2E8F0" font-size="28" font-weight="bold" font-family="Arial, sans-serif"> <!-- slate-200 -->
+    AI Image Processing Platform
+  </text>
+  <text x="450" y="65" text-anchor="middle" fill="#94A3B8" font-size="16" font-family="Arial, sans-serif"> <!-- slate-400 -->
+    Docker Compose Orchestration
+  </text>
+  
+  <!-- Components -->
+  <g transform="translate(50, 150)"> <!-- Upload: Center Y = 190 -->
+    <rect x="0" y="0" width="100" height="80" rx="10" fill="url(#uploadGrad)" filter="url(#glow)"/>
+    <text x="50" y="40" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Upload</text>
+    <text x="50" y="55" text-anchor="middle" fill="white" font-size="12">Image</text>
+    <circle cx="50" cy="40" r="25" fill="none" stroke="white" stroke-width="2" opacity="0.3">
+      <animate attributeName="r" values="25;35;25" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g transform="translate(200, 150)"> <!-- Python Producer: Center Y = 190 -->
+    <rect x="0" y="0" width="100" height="80" rx="10" fill="url(#producerGrad)" filter="url(#glow)"/>
+    <text x="50" y="35" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Python</text>
+    <text x="50" y="50" text-anchor="middle" fill="white" font-size="12">Producer</text>
+    <text x="50" y="65" text-anchor="middle" fill="#E0F2FE" font-size="10" font-family="monospace"> <!-- sky-100 -->
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+      sending...
+    </text>
+  </g>
+  
+  <!-- RabbitMQ: New position and size -->
+  <g transform="translate(350, 100)"> <!-- RabbitMQ main group: Top Y = 100 -->
+    <rect x="0" y="0" width="240" height="100" rx="15" fill="#334155" stroke="#64748B" stroke-width="2"/> <!-- slate-700, slate-500, Increased width to 240 -->
+    <text x="120" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold">RabbitMQ</text> <!-- Centered in 240 width -->
+    <circle cx="220" cy="20" r="5" fill="#0284C7"> <!-- Adjusted for new width -->
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Queues: Repositioned for more space -->
+    <g transform="translate(25, 45)"> <!-- Adjusted translate x to center queues in 240 width -->
+      <rect x="0" y="0" width="50" height="40" rx="5" fill="url(#rabbitGrad)" opacity="0.9"/>
+      <text x="25" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Q1</text>
+      <rect x="70" y="0" width="50" height="40" rx="5" fill="url(#rabbitGrad)" opacity="0.9"/> <!-- Increased gap: 0+50+20=70 -->
+      <text x="95" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Q2</text>
+      <rect x="140" y="0" width="50" height="40" rx="5" fill="url(#rabbitGrad)" opacity="0.9"/> <!-- Increased gap: 70+50+20=140 -->
+      <text x="165" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Q3</text>
+    </g>
+  </g>
+  
+  <g transform="translate(280, 320)"> <!-- AI MODEL 1: Top Y = 320. Center X = 320 -->
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="url(#aiGrad1)" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="white" font-size="11" font-weight="bold">AI MODEL 1</text>
+    <circle cx="40" cy="65" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g transform="translate(400, 320)"> <!-- AI MODEL 2: Top Y = 320. New Center X = 440 -->
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="url(#aiGrad2)" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="white" font-size="11" font-weight="bold">AI MODEL 2</text>
+    <circle cx="40" cy="65" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g transform="translate(520, 320)"> <!-- AI MODEL 3: Top Y = 320. New Center X = 560 -->
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="url(#aiGrad3)" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="white" font-size="11" font-weight="bold">AI MODEL 3</text>
+    <circle cx="40" cy="65" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke-width="2" fill="none">
+    <!-- Upload (right-center: 150,190) to Producer (left-center: 200,190) -->
+    <path d="M 150 190 L 200 190" stroke="#64748B" stroke-dasharray="5,5"> <!-- slate-500, This line remains dashed -->
+      <animate attributeName="stroke-dashoffset" values="10;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <!-- Producer (right-center: 300,190) to Q1 (left-center: 375,165) -->
+    <path d="M 300 190 H 337.5 V 165 H 375" stroke="#64748B"> <!-- Ends horizontal at Q1 left, Changed to solid -->
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.2s" repeatCount="indefinite"/> <!-- Added opacity animation like others -->
+    </path>
+
+    <!-- Q1 (bottom-center: 400,185) to AI MODEL 1 (top-center: 320,320) -->
+    <path d="M 400 185 V 280 H 320 V 320" stroke="#2DD4BF"> <!-- Ends vertical at AI1 top -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- AI MODEL 1 (right-center: 360,360) to Q2 (left-center: 445,165) - REROUTED ABOVE AI2, clean approach to Q2 -->
+    <path d="M 360 360 H 370 V 300 H 430 V 165 H 445" stroke="#38BDF8"> <!-- Exits AI1 H, up, right over AI2, down left of Q2, then right to Q2 -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- AI MODEL 1 (bottom-center: 320,400) to S3 (bottom, slightly left of center: 780,330) -->
+    <path d="M 320 400 V 450 H 780 V 330" stroke="#10B981"> <!-- Ends vertical at S3 bottom -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Q2 (bottom-center: 470,185) to AI MODEL 2 (top-center: 440,320) -->
+    <path d="M 470 185 V 280 H 440 V 320" stroke="#2DD4BF"> <!-- Ends vertical at AI2 top -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- AI MODEL 2 (right-center: 480,360) to Q3 (left-center: 515,165) - REROUTED ABOVE AI3 -->
+    <path d="M 480 360 H 490 V 300 H 500 V 165 H 515" stroke="#38BDF8"> <!-- Exits AI2 H, up, right over AI3, down left of Q3, then right to Q3 -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- AI MODEL 2 (bottom-center: 440,400) to S3 (bottom-center: 800,330) -->
+    <path d="M 440 400 V 460 H 800 V 330" stroke="#F59E0B">  <!-- Ends vertical at S3 bottom -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="3s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Q3 (bottom-center: 540,185) to AI MODEL 3 (top-center: 560,320) -->
+    <path d="M 540 185 V 280 H 560 V 320" stroke="#2DD4BF"> <!-- Ends vertical at AI3 top -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- AI MODEL 3 (bottom-center: 560,400) to S3 (bottom, slightly right of center: 820,330) -->
+    <path d="M 560 400 V 470 H 820 V 330" stroke="#EF4444"> <!-- Ends vertical at S3 bottom -->
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="4.5s" repeatCount="indefinite"/>
+    </path>
+  </g> <!-- End of Connection Lines -->
+
+  <!-- MinIO S3 Component - RESIZED and MOVED (if necessary for order) -->
+  <g transform="translate(720, 200)"> <!-- MinIO S3: Top Y = 200. Left Edge X = 720 -->
+    <rect x="0" y="0" width="160" height="130" rx="15" fill="url(#storageGrad)" filter="url(#glow)"/> <!-- Increased size -->
+    <text x="80" y="45" text-anchor="middle" fill="white" font-size="18" font-weight="bold">MinIO S3</text> <!-- Adjusted text pos -->
+    <text x="80" y="68" text-anchor="middle" fill="#BAE6FD" font-size="13">Storage</text> <!-- sky-200, Adjusted text pos -->
+    <rect x="30" y="90" width="100" height="5" fill="#075985" rx="2.5"/> <!-- sky-800, Adjusted -->
+    <rect x="30" y="100" width="75" height="5" fill="#075985" rx="2.5"/> <!-- sky-800, Adjusted -->
+    <rect x="30" y="110" width="90" height="5" fill="#075985" rx="2.5"/> <!-- sky-800, Adjusted -->
+  </g>
+  
+  <!-- Labels for processed outputs - Relocated under AI models -->
+  <text x="320" y="415" text-anchor="middle" fill="#10B981" font-size="10" font-family="monospace">Processed by AI MODEL 1</text> <!-- Green -->
+  <text x="440" y="425" text-anchor="middle" fill="#F59E0B" font-size="10" font-family="monospace">Processed by AI MODEL 1 &amp; 2</text> <!-- Orange/Yellow -->
+  <text x="560" y="435" text-anchor="middle" fill="#EF4444" font-size="10" font-family="monospace">Processed by AI MODEL 1, 2 &amp; 3</text> <!-- Red -->
+  
+  <!-- Moving particles through the system -->
+  <circle r="5" fill="#10B981"> <!-- Green particle -->
+    <animateMotion dur="15s" repeatCount="indefinite" 
+                   path="M 300 190 H 337.5 V 165 H 375 L 400 185 V 280 H 320 V 320 L 320 400 V 450 H 780 V 330">
+      <mpath href="#path1"/>
+    </animateMotion>
+  </circle>
+  
+  <circle r="5" fill="#F59E0B"> <!-- Orange/Yellow particle -->
+    <animateMotion dur="15s" begin="5s" repeatCount="indefinite"
+                   path="M 360 360 H 370 V 300 H 430 V 165 H 445 L 470 185 V 280 H 440 V 320 L 440 400 V 460 H 800 V 330">
+      <mpath href="#path2"/>
+    </animateMotion>
+  </circle>
+  
+  <circle r="5" fill="#EF4444"> <!-- Red particle -->
+    <animateMotion dur="15s" begin="10s" repeatCount="indefinite"
+                   path="M 480 360 H 490 V 300 H 500 V 165 H 515 L 540 185 V 280 H 560 V 320 L 560 400 V 470 H 820 V 330">
+      <mpath href="#path3"/>
+    </animateMotion>
+  </circle>
+</svg>

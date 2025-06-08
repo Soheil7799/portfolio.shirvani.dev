@@ -1,0 +1,219 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="uploadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="audioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="videoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mergeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369A1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BE185D;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0F172A"/>
+  
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" fill="url(#grid)"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#E2E8F0" font-size="28" font-weight="bold" font-family="Arial, sans-serif">
+    Video Processing Platform
+  </text>
+  <text x="450" y="65" text-anchor="middle" fill="#94A3B8" font-size="16" font-family="Arial, sans-serif">
+    Real-time Audio &amp; Video Filter Application
+  </text>
+  
+  <!-- Upload Component -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="120" height="90" rx="12" fill="url(#uploadGrad)" filter="url(#glow)"/>
+    <text x="60" y="35" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Upload</text>
+    <text x="60" y="52" text-anchor="middle" fill="white" font-size="12">Video File</text>
+    <text x="60" y="68" text-anchor="middle" fill="#DDD6FE" font-size="10">(.mp4, .avi, .mov)</text>
+    <circle cx="60" cy="45" r="30" fill="none" stroke="white" stroke-width="2" opacity="0.3">
+      <animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Configuration Panel -->
+  <g transform="translate(250, 120)">
+    <rect x="0" y="0" width="200" height="150" rx="15" fill="#334155" stroke="#64748B" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Filter Configuration</text>
+    
+    <!-- Audio Filters Section -->
+    <rect x="15" y="40" width="170" height="25" rx="8" fill="url(#audioGrad)" opacity="0.8"/>
+    <text x="100" y="58" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Audio Filters</text>
+
+    
+    <!-- Video Filters Section -->
+    <rect x="15" y="95" width="170" height="25" rx="8" fill="url(#videoGrad)" opacity="0.8"/>
+    <text x="100" y="113" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Video Filters</text>
+ 
+    
+    <circle cx="180" cy="25" r="5" fill="#F59E0B">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Processing Pipeline -->
+  <g transform="translate(120, 320)">
+    <!-- Audio Extraction -->
+    <rect x="0" y="0" width="100" height="80" rx="10" fill="url(#audioGrad)" filter="url(#glow)"/>
+    <text x="50" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Audio</text>
+    <text x="50" y="50" text-anchor="middle" fill="white" font-size="12">Extraction</text>
+    <text x="50" y="65" text-anchor="middle" fill="#D1FAE5" font-size="9">(FFmpeg)</text>
+    
+    <!-- Video Processing -->
+    <rect x="150" y="0" width="100" height="80" rx="10" fill="url(#videoGrad)" filter="url(#glow)"/>
+    <text x="200" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Video</text>
+    <text x="200" y="50" text-anchor="middle" fill="white" font-size="12">Processing</text>
+    <text x="200" y="65" text-anchor="middle" fill="#FEE2E2" font-size="9">(FFmpeg)</text>
+    
+    <!-- Audio Processing -->
+    <rect x="0" y="120" width="100" height="80" rx="10" fill="url(#audioGrad)" filter="url(#glow)"/>
+    <text x="50" y="155" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Audio</text>
+    <text x="50" y="170" text-anchor="middle" fill="white" font-size="12">Processing</text>
+    <text x="50" y="185" text-anchor="middle" fill="#D1FAE5" font-size="9">(Python/NumPy/SciPy)</text>
+    
+    <!-- Merge Streams -->
+    <rect x="300" y="60" width="100" height="80" rx="10" fill="url(#mergeGrad)" filter="url(#glow)"/>
+    <text x="350" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Merge</text>
+    <text x="350" y="105" text-anchor="middle" fill="white" font-size="12">Audio/Video</text>
+    <text x="350" y="120" text-anchor="middle" fill="#BAE6FD" font-size="9"></text>
+    
+    <!-- Processing indicators -->
+    <circle cx="50" cy="40" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="40" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="160" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="100" r="3" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Output Streaming -->
+  <g transform="translate(550, 300)">
+    <rect x="0" y="0" width="200" height="120" rx="15" fill="url(#outputGrad)" filter="url(#glow)"/>
+    <text x="100" y="35" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Processed Video</text>
+    <text x="100" y="55" text-anchor="middle" fill="white" font-size="14">Streaming</text>
+    
+    <!-- Video player mockup -->
+    <rect x="20" y="65" width="160" height="40" rx="5" fill="#000" stroke="#64748B" stroke-width="1"/>
+    <polygon points="90,75 90,95 110,85" fill="white"/>
+    
+    <!-- Progress bar -->
+    <rect x="30" y="110" width="140" height="3" fill="#64748B" rx="1.5"/>
+    <rect x="30" y="110" width="0" height="3" fill="white" rx="1.5">
+      <animate attributeName="width" values="0;140;0" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Filter Info Panels -->
+  <g transform="translate(500, 150)">
+    <!-- Audio Filters Detail -->
+    <rect x="0" y="0" width="160" height="120" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="2" opacity="0.9"/>
+    <text x="80" y="20" text-anchor="middle" fill="#10B981" font-size="12" font-weight="bold">Available Audio Filters</text>
+    <text x="15" y="40" fill="#D1FAE5" font-size="10">• Gain Compression</text>
+    <text x="15" y="55" fill="#CBD5E1" font-size="10">• Voice Enhancement</text>
+    <text x="15" y="70" fill="#CBD5E1" font-size="10">• Noise Reduction</text>
+    <text x="15" y="85" fill="#CBD5E1" font-size="10">• Phone-like Filter</text>
+    <text x="15" y="100" fill="#CBD5E1" font-size="10">• Car-like Filter</text>
+    
+    <!-- Video Filters Detail -->
+    <rect x="180" y="0" width="160" height="120" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="2" opacity="0.9"/>
+    <text x="260" y="20" text-anchor="middle" fill="#EF4444" font-size="12" font-weight="bold">Available Video Filters</text>
+    <text x="195" y="40" fill="#FEE2E2" font-size="10">• Grayscale</text>
+    <text x="195" y="55" fill="#FEE2E2" font-size="10">• Color Inversion</text>
+    <text x="195" y="70" fill="#FEE2E2" font-size="10">• Frame Interpolation</text>
+    <text x="195" y="85" fill="#FEE2E2" font-size="10">• Upscaling</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke-width="3" fill="none">
+    <!-- Upload to Config -->
+    <path d="M 170 195 L 250 195" stroke="#8B5CF6" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="12;0" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Config to Audio Extraction -->
+    <path d="M 300 270 L 300 290 L 170 290 L 170 320" stroke="#10B981">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Audio Extraction to Video Processing -->
+    <path d="M 220 360 L 270 360" stroke="#EF4444">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Audio Extraction to Audio Processing -->
+    <path d="M 170 400 L 170 440" stroke="#10B981">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Video Processing to Merge -->
+    <path d="M 270 360 L 470 360 L 470 380" stroke="#EF4444">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Audio Processing to Merge -->
+    <path d="M 220 480 L 320 480 L 320 420 L 420 420" stroke="#10B981">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Merge to Output -->
+    <path d="M 520 420 H 535 V 360 L 550 360" stroke="#0EA5E9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Processing Status Indicators -->
+  <text x="170" y="310" text-anchor="middle" fill="#10B981" font-size="9" font-family="monospace">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" begin="2s" repeatCount="indefinite"/>
+    Processing...
+  </text>
+  <text x="270" y="310" text-anchor="middle" fill="#EF4444" font-size="9" font-family="monospace">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" begin="2.5s" repeatCount="indefinite"/>
+    Filtering...
+  </text>
+  <text x="420" y="370" text-anchor="middle" fill="#0EA5E9" font-size="9" font-family="monospace">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+    Merging...
+  </text>
+  
+  <!-- Simple Data Flow Particles (removed complex animateMotion) -->
+  
+  <!-- Technology Labels -->
+  <text x="450" y="580" text-anchor="middle" fill="#64748B" font-size="12" font-family="monospace">
+    Python • FFmpeg • SciPy • NumPy • Real-time Processing
+  </text>
+</svg>

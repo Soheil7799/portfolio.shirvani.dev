@@ -7,11 +7,13 @@ import ProjectCard from "@/components/ProjectCard";
 import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
+import mecasProject from "public/projects/mecas.svg";
+import portfolioProject from "public/projects/portfolio-site.png";
+import GHPortfolio from "public/projects/ghp-portfolio.png";
 
-// You'll need to add these images to your public/projects/ folder
-import mecasProject from "public/projects/mecas-service.webp";
-import portfolioProject from "public/projects/portfolio-site.webp";
-import devopsProject from "public/projects/devops-automation.webp";
+// import automationProject from "public/projects/ai-automation-platform.webp";
+import automationProject from "public/projects/ai-automation-platform.svg";
+import devopsProject from "public/projects/devops.webp";
 
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
@@ -65,6 +67,25 @@ const ProjectSection: React.FC = () => {
 
 const projects = [
   {
+    title: "AI Image Processing Automation Platform",
+    type: "DevOps + Infrastructure",
+    image: (
+      <Image
+        src={automationProject}
+        sizes="100vw"
+        fill
+        alt="AI Processing Automation Platform"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "Enterprise-level automation platform for AI image enhancement pipeline. Built interactive CLI for model selection, orchestrated multi-container workflows with RabbitMQ message queuing, and integrated MinIO S3 storage for processed images.",
+    tags: ["Docker", "RabbitMQ", "MinIO S3", "Bash", "Python", "Docker Compose", "Message Queue"],
+    liveUrl: "", // Add if you have a demo video
+    codeUrl: "", // Add GitHub link if public
+    bgColor: "bg-[#FF6B6B]",
+    githubApi: "", // Add if public repo
+  },
+  {
     title: "MECAS - Media Conversion Service",
     type: "Backend + DevOps",
     image: (
@@ -76,31 +97,12 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "FastAPI-based REST API backend service for multimedia conversion and storage, supporting 5+ file formats with asynchronous processing and Docker containerization.",
-    tags: ["Python", "FastAPI", "FFmpeg", "Docker", "GitHub Actions", "AWS"],
-    liveUrl: "", // Add if you have a demo
+    desc: "FastAPI-based REST API backend service for multimedia conversion and storage, supporting 5+ file formats with asynchronous processing, Docker containerization, and CI/CD pipelines.",
+    tags: ["Python", "FastAPI", "FFmpeg", "Docker", "GitHub Actions", "NumPy", "SciPy"],
+    liveUrl: "",
     codeUrl: "https://github.com/Soheil7799/mecas-service",
     bgColor: "bg-[#9FD0E3]",
     githubApi: "https://api.github.com/repos/Soheil7799/mecas-service",
-  },
-  {
-    title: "DevOps Practice Projects",
-    type: "CI/CD + Backend",
-    image: (
-      <Image
-        src={devopsProject}
-        sizes="100vw"
-        fill
-        alt="DevOps Practice Projects"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Collection of backend services with CI/CD pipelines, database management, and cloud deployment practices using modern DevOps tools and methodologies.",
-    tags: ["Node.js", "MongoDB", "Jenkins", "GitHub Actions", "Express.js"],
-    liveUrl: "",
-    codeUrl: "https://github.com/Soheil7799",
-    bgColor: "bg-[#10b981]", // Green background like your card
-    githubApi: "https://api.github.com/repos/Soheil7799",
   },
   {
     title: "Portfolio Website",
@@ -114,88 +116,50 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Personal portfolio website built with Hugo static site generator and deployed on GitHub Pages. Features responsive design, YAML configuration, and modern web practices.",
-    tags: ["Hugo", "YAML", "GitHub Pages", "Responsive Design", "Static Site"],
+    desc: "Personal portfolio website built with NextJs static site generator and deployed on CloudFlare Pages. Features responsive design, YAML configuration, and modern web practices.",
+    tags: ["NextJs", "Cloud Flare Pages", "Responsive Design", "Static Site"],
     liveUrl: "https://portfolio.shirvani.dev",
     codeUrl: "https://github.com/Soheil7799/portfolio.shirvani.dev",
-    bgColor: "bg-[#8b5cf6]", // Purple background like your card
+    bgColor: "bg-[#8b5cf6]",
     githubApi: "https://api.github.com/repos/Soheil7799/portfolio.shirvani.dev",
   },
   {
-    title: "DevOps Automation Scripts",
-    type: "DevOps + Infrastructure",
+    title: "GitHub Pages Portfolio",
+    type: "Frontend",
+    image: (
+      <Image
+        src={GHPortfolio}
+        sizes="100vw"
+        fill
+        alt="GitHub Pages Site"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "Alternative portfolio website hosted directly on GitHub Pages. Demonstrates static site deployment and web development skills.",
+    tags: ["Hugo", "YAML", "GitHub Pages", "Responsive Design", "Static Site"],
+    liveUrl: "https://soheil7799.github.io",
+    codeUrl: "https://github.com/Soheil7799/Soheil7799.github.io",
+    bgColor: "bg-[#10b981]",
+    githubApi: "https://api.github.com/repos/Soheil7799/Soheil7799.github.io",
+  },
+  {
+    title: "DevOps & Backend Experience",
+    type: "Professional Experience",
     image: (
       <Image
         src={devopsProject}
         sizes="100vw"
         fill
-        alt="DevOps Automation"
+        alt="DevOps Experience"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Collection of automation scripts and configurations for CI/CD pipelines, Docker deployments, and Linux system administration. Reduced deployment time by 90%.",
-    tags: ["Bash", "Docker", "Jenkins", "GitHub Actions", "Linux"],
-    liveUrl: "", // Add if you have documentation
-    codeUrl: "https://github.com/Soheil7799", // Link to your main profile or specific repo
-    bgColor: "bg-[#A6CECE]",
-    githubApi: "https://api.github.com/repos/Soheil7799", // You might need to adjust this
-  },
-  {
-    title: "RESTful API with Node.js",
-    type: "Backend",
-    image: (
-      <Image
-        src={mecasProject} // Reuse or create a new image
-        sizes="100vw"
-        fill
-        alt="Node.js REST API"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "RESTful APIs built with Node.js and Express.js featuring 4 key endpoints for data management, integrated with MongoDB using Mongoose with 3 main collections.",
-    tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "REST API"],
+    desc: "Professional experience with Linux administration, Docker containerization, CI/CD implementation with Jenkins and GitHub Actions. Reduced deployment time by 90% through automation.",
+    tags: ["Linux", "Docker", "Bash", "Shell Scripting", "Jenkins", "GitHub Actions"],
     liveUrl: "",
-    codeUrl: "https://github.com/Soheil7799", // Update with actual repo
-    bgColor: "bg-[#C5E4E7]",
-    githubApi: "https://api.github.com/repos/Soheil7799", // Update with actual repo
-  },
-  {
-    title: "Database Design Projects",
-    type: "Database + Backend",
-    image: (
-      <Image
-        src={portfolioProject} // Reuse or create a new image
-        sizes="100vw"
-        fill
-        alt="Database Design"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Relational database design projects using PostgreSQL with proper normalization techniques. Includes data modeling and optimization across multiple academic projects.",
-    tags: ["PostgreSQL", "SQL", "Database Design", "Data Modeling"],
-    liveUrl: "",
-    codeUrl: "https://github.com/Soheil7799", // Update with actual repo
-    bgColor: "bg-[#EBF4F4]",
-    githubApi: "https://api.github.com/repos/Soheil7799", // Update with actual repo
-  },
-  {
-    title: "Learning: Terraform & Kubernetes",
-    type: "Infrastructure + Learning",
-    image: (
-      <Image
-        src={devopsProject} // Reuse or create a new image
-        sizes="100vw"
-        fill
-        alt="Terraform Kubernetes Learning"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Current learning projects focused on Infrastructure as Code with Terraform and container orchestration with Kubernetes. Building practical skills for cloud infrastructure management.",
-    tags: ["Terraform", "Kubernetes", "Infrastructure as Code", "Cloud"],
-    liveUrl: "",
-    codeUrl: "https://github.com/Soheil7799", // Update when you create learning repos
+    codeUrl: "https://github.com/Soheil7799",
     bgColor: "bg-[#FBFBFB]",
-    githubApi: "https://api.github.com/repos/Soheil7799", // Update when you create learning repos
+    githubApi: "https://api.github.com/users/Soheil7799",
   },
 ];
 
