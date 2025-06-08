@@ -1,5 +1,5 @@
 {
-  "name": "satnaing.dev",
+  "name": "shirvani.dev",
   "version": "2.3.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format:check": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "export": "next export"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
