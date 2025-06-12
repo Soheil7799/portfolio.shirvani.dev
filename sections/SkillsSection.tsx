@@ -24,15 +24,13 @@ const SkillsSection: React.FC = () => {
     "Linux",
     "Docker",
     "Bash Scripting",
-    "AWS",
-    "Azure",
     "Digital Ocean",
-    "CI/CD (Jenkins, GitHub Actions)",
+    "CI/CD (Jenkins, GitHub Actions, GitLab CI)",
     "FastAPI",
     "RabbitMQ",
     "MongoDB",
     "PostgreSQL",
-    "Git & GitHub",
+    "Git, GitHub, GitLab",
     "REST APIs",
   ];
 
@@ -48,11 +46,15 @@ const SkillsSection: React.FC = () => {
   ];
 
   const nextSteps = [
+    "Develop proficiency in Go (Golang) for backend systems and tooling.",
+    "Broaden understanding and practical skills across the Amazon Web Services (AWS) ecosystem.",
+    "Explore Microsoft Azure services for cloud infrastructure and platform solutions.",
     "Deepen Kubernetes knowledge and practical application.",
-    "Master Terraform for IaC.",
     "Explore advanced AWS/Cloud services (e.g., serverless, monitoring).",
+    "Master Terraform for IaC.",
     "Contribute to more open-source projects.",
     "Enhance system design and architecture skills.",
+    "Gain hands-on experience with Ansible for automation and configuration management.",
   ];
 
   return (
