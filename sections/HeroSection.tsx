@@ -134,11 +134,10 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="mt-2 my-4 md:mb-8">
           <p className="mb-1">
-            I am a Full-Stack Developer with a passion for delivering
-            exceptional results.
+            I'm someone who gets excited about solving infrastructure puzzles and building systems that just work.
           </p>
           <p>
-            I'm someone who gets excited about solving infrastructure puzzles and building systems that just work. Whether it's containerizing applications,
+            Whether it's containerizing applications,
             setting up CI/CD pipelines, or optimizing server performance, I enjoy making technology serve people better.
           </p>
         </div>
