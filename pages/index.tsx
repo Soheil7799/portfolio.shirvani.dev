@@ -8,6 +8,8 @@ import SocialLinks from "@/components/SocialLinks";
 import HeroSection from "@/sections/HeroSection";
 import AboutSection from "@/sections/AboutSection";
 import ProjectSection from "@/sections/ProjectSection";
+import ExperienceSection from "@/sections/ExperienceSection";
+
 // import BlogSection from "@/sections/BlogSection";
 import SkillsSection from "@/sections/SkillsSection"; // Add this line
 import ContactSection from "@/sections/ContactSection";
@@ -46,6 +48,7 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
           <main id="main">
             <HeroSection />
             <AboutSection />
+            <ExperienceSection />
             <ProjectSection />
             <SkillsSection /> {/* Add this line */}
             {/* <BlogSection posts={blogPosts} /> */}
