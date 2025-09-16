@@ -134,11 +134,13 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="mt-2 my-4 md:mb-8">
           <p className="mb-1">
-            I'm someone who gets excited about solving infrastructure puzzles and building systems that just work.
+          I am a DevOps Engineer and Backend Developer specializing in cloud infrastructure automation and backend development.
           </p>
           <p>
-            Whether it's containerizing applications,
-            setting up CI/CD pipelines, or optimizing server performance, I enjoy making technology serve people better.
+          I lead cloud infrastructure teams, design scalable AWS architectures, and implement CI/CD pipelines that reduce deployment times from hours to minutes.
+          </p>
+          <p>
+          As Cloud Architect at StarView, I supervise infrastructure achieving 99.99% system uptime.
           </p>
         </div>
         <div>
@@ -149,7 +151,7 @@ const HeroSection: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-marrsgreen dark:bg-carrigreen text-white dark:text-bgdark font-medium rounded-lg hover:bg-opacity-90 transition-colors"
           >
-            Download Resume
+            Download CV
           </a>
         </div>
       </div>
