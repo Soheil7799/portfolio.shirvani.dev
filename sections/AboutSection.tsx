@@ -169,14 +169,13 @@ const AboutSection: React.FC = () => {
             </div>
             <div className="md:w-1/2 lg:w-3/5 space-y-6">
             <p className="about-intro">
-              DevOps Engineer and Backend Developer with skills in Python, Linux,
-              Docker, and cloud infrastructure. Experienced with CI/CD pipelines, version
-              control, and database management. Familiar with AWS, Digital Ocean, and
-              Azure. Currently learning Terraform and Kubernetes.
+              DevOps Engineer and Backend Developer with professional cloud infrastructure experience.
+              Skilled in Python, Go, Linux, Docker, and AWS services. Currently Cloud Architect at disaster assessment startup,
+              leading cloud infrastructure and supervising 3-person backend team within 8-person technical organization.
               <br />
               Known for problem-solving, adaptability, and a collaborative mindset in cross-functional teams.
               <br />
-              Seeking junior-level opportunities in Europe to apply technical skills while growing professionally.
+              Open to discussing cloud architecture projects, DevOps consulting opportunities, and technical collaboration in Europe.
             </p>
 
             <div ref={eduRef}>
