@@ -32,7 +32,7 @@ const ExperienceSection: React.FC = () => {
         "Architected microservice backend architecture using Docker and Traefik reverse proxy.",
         "Transformed legacy monolithic application to cloud-agnostic microservice architecture. Eliminated vendor dependency.",
         "Spearheaded the streamlining of 4 critical dependency management processes utilizing Docker containerization, leading to a 40% reduction in production errors and a 80% improvement in system uptime.",
-        "Supervise 3-person backend team within 8-person technical organization. Oversee entire cloud infrastructure."
+        "Led a 3-person backend team within an 8-person technical organization, overseeing the entire cloud infrastructure."
       ]
     }
   ];
