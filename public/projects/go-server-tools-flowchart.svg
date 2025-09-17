@@ -1,0 +1,102 @@
+<svg width="540" height="400" viewBox="0 0 540 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="540" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="270" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Go Server Management Tool</text>
+  <text x="270" y="45" text-anchor="middle" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="12">CLI DevOps Utility • Bubble Tea TUI • SSH Connections • File Transfers</text>
+  
+  <!-- CLI Start -->
+  <rect x="20" y="70" width="100" height="50" rx="8" fill="#00ADD8" stroke="#ffffff" stroke-width="1"/>
+  <text x="70" y="90" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">CLI Launch</text>
+  <text x="70" y="105" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Terminal Entry</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M125 95 L155 95" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Bubble Tea TUI -->
+  <rect x="160" y="70" width="100" height="50" rx="8" fill="#ff6b6b" stroke="#ffffff" stroke-width="1"/>
+  <text x="210" y="85" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Bubble Tea TUI</text>
+  <text x="210" y="100" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Interactive Interface</text>
+  <text x="210" y="113" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Menu Navigation</text>
+  
+  <!-- Arrow down from TUI -->
+  <path d="M210 125 L210 155" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Command Selection -->
+  <rect x="160" y="160" width="100" height="60" rx="8" fill="#9b59b6" stroke="#ffffff" stroke-width="1"/>
+  <text x="210" y="180" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Command Menu</text>
+  <text x="210" y="195" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">SSH Connect</text>
+  <text x="210" y="208" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">File Transfer</text>
+  
+  <!-- SSH Branch -->
+  <path d="M265 180 L295 155" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- SSH Connection -->
+  <rect x="300" y="130" width="100" height="50" rx="8" fill="#e67e22" stroke="#ffffff" stroke-width="1"/>
+  <text x="350" y="150" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SSH Connection</text>
+  <text x="350" y="165" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">crypto/ssh</text>
+  
+  <!-- File Transfer Branch -->
+  <path d="M265 200 L295 225" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- File Transfer -->
+  <rect x="300" y="200" width="100" height="50" rx="8" fill="#f39c12" stroke="#ffffff" stroke-width="1"/>
+  <text x="350" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">File Transfer</text>
+  <text x="350" y="235" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">SCP/SFTP</text>
+  
+  <!-- Server Management Branch -->
+  <path d="M265 190 L295 270" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Server Management -->
+  <rect x="300" y="270" width="100" height="50" rx="8" fill="#27ae60" stroke="#ffffff" stroke-width="1"/>
+  <text x="350" y="290" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Server Mgmt</text>
+  <text x="350" y="305" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Remote Commands</text>
+  
+  <!-- Arrows to Remote Server -->
+  <path d="M405 155 L435 155" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M405 225 L435 225" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M405 295 L435 295" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Remote Server -->
+  <rect x="440" y="190" width="80" height="80" rx="8" fill="#2c3e50" stroke="#ffffff" stroke-width="1"/>
+  <text x="480" y="210" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Remote</text>
+  <text x="480" y="225" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Server</text>
+  <text x="480" y="245" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Linux/Unix</text>
+  <text x="480" y="258" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Services</text>
+  
+  <!-- I/O Libraries Box -->
+  <rect x="20" y="250" width="120" height="70" rx="8" fill="#8e44ad" stroke="#ffffff" stroke-width="1"/>
+  <text x="80" y="270" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">I/O Libraries</text>
+  <text x="80" y="285" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">File Operations</text>
+  <text x="80" y="298" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Stream Handling</text>
+  <text x="80" y="311" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">Buffer Management</text>
+  
+  <!-- Arrow from I/O to Command Selection -->
+  <path d="M145 285 L155 200" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Go Packages Box -->
+  <rect x="20" y="340" width="500" height="40" rx="8" fill="#34495e" stroke="#4ecdc4" stroke-width="1"/>
+  <text x="30" y="355" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Go Packages Used:</text>
+  <text x="30" y="368" fill="#ffffff" font-family="Arial, sans-serif" font-size="9">crypto/ssh • io • os • net • bufio • Bubble Tea TUI Framework • fmt • log</text>
+  
+  <!-- Technology labels -->
+  <rect x="450" y="80" width="70" height="18" rx="9" fill="#ff6b6b"/>
+  <text x="485" y="92" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Bubble Tea</text>
+  
+  <rect x="450" y="105" width="70" height="18" rx="9" fill="#e67e22"/>
+  <text x="485" y="117" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">crypto/ssh</text>
+  
+  <rect x="450" y="130" width="70" height="18" rx="9" fill="#8e44ad"/>
+  <text x="485" y="142" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">io libraries</text>
+  
+  <rect x="450" y="155" width="70" height="18" rx="9" fill="#00ADD8"/>
+  <text x="485" y="167" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Go CLI</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ecdc4"/>
+    </marker>
+  </defs>
+</svg>
