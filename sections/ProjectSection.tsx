@@ -11,6 +11,10 @@ import mecasProject from "public/projects/mecas.svg";
 import portfolioProject from "public/projects/portfolio-site.png";
 import GHPortfolio from "public/projects/ghp-portfolio.png";
 
+import goBillSplitter from "public/projects/go-bill-splitter-icon.svg";
+import snippetBox from "public/projects/snippetbox-flowchart.svg";
+import goServerTools from "public/projects/go-server-tools-flowchart.svg";
+
 // import automationProject from "public/projects/ai-automation-platform.webp";
 import automationProject from "public/projects/ai-automation-platform.svg";
 import devopsProject from "public/projects/devops.webp";
@@ -79,7 +83,15 @@ const projects = [
       />
     ),
     desc: "Enterprise-level automation platform for AI image enhancement pipeline. Built interactive CLI for model selection, orchestrated multi-container workflows with RabbitMQ message queuing, and integrated MinIO S3 storage for processed images.",
-    tags: ["Docker", "RabbitMQ", "MinIO S3", "Bash", "Python", "Docker Compose", "Message Queue"],
+    tags: [
+      "Docker",
+      "RabbitMQ",
+      "MinIO S3",
+      "Bash",
+      "Python",
+      "Docker Compose",
+      "Message Queue",
+    ],
     liveUrl: "", // Add if you have a demo video
     codeUrl: "", // Add GitHub link if public
     bgColor: "bg-[#FF6B6B]",
@@ -98,11 +110,76 @@ const projects = [
       />
     ),
     desc: "FastAPI-based REST API backend service for multimedia conversion and storage, supporting 5+ file formats with asynchronous processing, Docker containerization, and CI/CD pipelines.",
-    tags: ["Python", "FastAPI", "FFmpeg", "Docker", "GitHub Actions", "NumPy", "SciPy"],
+    tags: [
+      "Python",
+      "FastAPI",
+      "FFmpeg",
+      "Docker",
+      "GitHub Actions",
+      "NumPy",
+      "SciPy",
+    ],
     liveUrl: "",
     codeUrl: "https://github.com/Soheil7799/mecas-service",
     bgColor: "bg-[#9FD0E3]",
     githubApi: "https://api.github.com/repos/Soheil7799/mecas-service",
+  },
+  {
+    title: "Go Server Management Tool",
+    type: "CLI DevOps Utility",
+    image: (
+      <Image
+        src={goServerTools}
+        sizes="100vw"
+        fill
+        alt="Go Server Management Tool"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc:"Interactive command-line DevOps tool for remote server management and automation. Features terminal user interface built with Bubble Tea framework, secure SSH connections, and efficient file transfer capabilities. Streamlines common server administration tasks through an intuitive CLI experience.", 
+    tags: ["Go", "Bubble Tea", "SSH", "SCP", "CLI", "TUI"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799/go-server-tools",
+    bgColor: "bg-[#9FD0E3]",
+    githubApi: "https://api.github.com/repos/Soheil7799/go-server-tools",
+  },
+  {
+    title: "SnippetBox Web App",
+    type: "Full-Stack Web Application with Go",
+    image: (
+      <Image
+        src={snippetBox}
+        sizes="100vw"
+        fill
+        alt="SnippetBox Web App"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "Comprehensive web application demonstrating advanced Go web development patterns. Features secure user authentication, session management, and dynamic content rendering. Implements industry-standard security practices including CSRF protection, secure headers, and input validation.",
+    tags: ["Go", "net/http", "HTML", "CSS", "Go Templates", "PostgreSQL"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799/snippetbox",
+    bgColor: "bg-[#9FD0E3]",
+    githubApi: "https://api.github.com/repos/Soheil7799/snippetbox",
+  },
+  {
+    title: "Go Bill Splitter",
+    type: "Full-Stack Web Application with Go",
+    image: (
+      <Image
+        src={goBillSplitter}
+        sizes="100vw"
+        fill
+        alt="Go Bill Splitter"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "Full-stack Go web application for splitting bills and managing shared expenses. Built with Gin framework for HTTP routing, GORM for database operations, and Go templates for dynamic HTML rendering. Features user management, expense calculation algorithms, and responsive web interface.",
+    tags: ["Go", "Gin", "GORM", "HTML", "CSS", "Go Templates", "SQLite"],
+    liveUrl: "",
+    codeUrl: "https://github.com/Soheil7799/go-bill-splitter",
+    bgColor: "bg-[#9FD0E3]",
+    githubApi: "https://api.github.com/repos/Soheil7799/go-bill-splitter",
   },
   {
     title: "Portfolio Website",
@@ -155,7 +232,14 @@ const projects = [
       />
     ),
     desc: "Professional experience with Linux administration, Docker containerization, CI/CD implementation with Jenkins and GitHub Actions. Reduced deployment time by 90% through automation.",
-    tags: ["Linux", "Docker", "Bash", "Shell Scripting", "Jenkins", "GitHub Actions"],
+    tags: [
+      "Linux",
+      "Docker",
+      "Bash",
+      "Shell Scripting",
+      "Jenkins",
+      "GitHub Actions",
+    ],
     liveUrl: "",
     codeUrl: "https://github.com/Soheil7799",
     bgColor: "bg-[#FBFBFB]",
