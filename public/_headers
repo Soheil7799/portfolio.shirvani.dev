@@ -1,0 +1,10 @@
+# Block all .pages.dev variants from being indexed
+https://*.portfolio-shirvani-dev.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://portfolio-shirvani-dev.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Allow your custom domain only
+https://portfolio.shirvani.dev/*
+  X-Robots-Tag: index, follow

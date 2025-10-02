@@ -1,0 +1,3 @@
+# Redirect all .pages.dev traffic to custom domain (including preview deployments)
+https://*.portfolio-shirvani-dev.pages.dev/* https://portfolio.shirvani.dev/:splat 301!
+https://portfolio-shirvani-dev.pages.dev/* https://portfolio.shirvani.dev/:splat 301!
