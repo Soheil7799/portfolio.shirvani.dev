@@ -169,13 +169,14 @@ const AboutSection: React.FC = () => {
             </div>
             <div className="md:w-1/2 lg:w-3/5 space-y-6">
             <p className="about-intro">
-              DevOps Engineer and Backend Developer with professional cloud infrastructure experience.
-              Skilled in Python, Go, Linux, Docker, and AWS services. Currently Cloud Architect at disaster assessment startup,
-              leading cloud infrastructure and supervising 3-person backend team within 8-person technical organization.
-              <br />
-              Known for problem-solving, adaptability, and a collaborative mindset in cross-functional teams.
-              <br />
-              Open to discussing cloud architecture projects, DevOps consulting opportunities, and technical collaboration in Europe.
+              I'm a DevOps/Cloud Engineer based in Torino, Italy, currently working at a disaster assessment startup
+              where I build and manage cloud infrastructure across multiple providers. I've migrated legacy monoliths
+              to microservices, automated ML pipelines that used to run manually, and even proposed a Rust/WASM
+              architecture for privacy-preserving client-side processing.
+              <br /><br />
+              Outside of work, I co-organize a bootcamp teaching the full application development lifecycle
+              to aspiring developers. I'm studying Computer Engineering at Politecnico di Torino and always
+              exploring new technologies — currently diving into Rust, NixOS, and embedded systems.
             </p>
 
             <div ref={eduRef}>
@@ -200,9 +201,8 @@ const educationInfo = [
     title: "B.Sc. Computer Engineering",
     subTitle: "Politecnico Di Torino (PoliTo) | 2022 ~ Present",
     list: [
-      "Coursework in programming, computer systems, and software engineering",
-      "Focus on DevOps, backend development, and cloud technologies",
-      "Studying in Torino, Italy",
+      "Relational Databases, System Architecture, Algorithms",
+      "Achieved 30L (cum laude) in Cybersecurity",
     ],
   },
   {
@@ -210,9 +210,8 @@ const educationInfo = [
     title: "B.Sc. Mining Engineering",
     subTitle: "University Of Tehran (UT) | 2017 - 2021",
     list: [
-      "Studied foundational engineering, programming, and project management",
-      "Developed resilience and problem-solving skills in challenging field environments",
-      "Developed strong teamwork, communication, and patience by collaborating with diverse groups of people",
+      "Led field research expeditions in remote and harsh-weather environments",
+      "Built resilience, adaptability, and teamwork through hands-on geological fieldwork",
     ],
   },
   {

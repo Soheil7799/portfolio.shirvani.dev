@@ -24,7 +24,7 @@ type Props = {
 
 export const meta = {
   description:
-    "Mostafa Shirvani is a DevOps/Backend developer passionate about infrastructure automation, containerization, and building scalable systems.",
+    "Mostafa Shirvani is a DevOps/Cloud Engineer with expertise in cloud architecture, infrastructure automation, and hybrid cloud migrations.",
   author: "Mostafa Shirvani",
   type: "website",
   ogImage: `${process.env.NEXT_PUBLIC_URL}/mostafa-shirvani-og.png`,
@@ -36,7 +36,7 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
   return (
     <>
       <AppHead
-        title="Mostafa Shirvani - DevOps/Backend Developer"
+        title="Mostafa Shirvani - DevOps/Cloud Engineer"
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
@@ -49,8 +49,8 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
             <HeroSection />
             <AboutSection />
             <ExperienceSection />
+            <SkillsSection />
             <ProjectSection />
-            <SkillsSection /> {/* Add this line */}
             {/* <BlogSection posts={blogPosts} /> */}
             <ContactSection />
           </main>

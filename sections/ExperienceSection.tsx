@@ -21,18 +21,31 @@ const ExperienceSection: React.FC = () => {
 
   const experiences = [
     {
-      title: "Cloud Architect",
-      company: "StarView",
+      title: "DevOps/Cloud Engineer",
+      company: "StarView (StartUp)",
       location: "Torino, Italy",
       duration: "Jun. 2025 - Present",
       achievements: [
-        "Supervise cloud infrastructure for disaster assessment platform serving insurance companies. Achieved 99.99% uptime.",
-        "Designed and implemented an automated image processing pipeline utilizing ML models with Python and Bash, increasing image processing throughput by 10x and reducing manual intervention by 90%.",
-        "Deployed complete CI/CD automation on AWS using GitLab CI. Reduced release time from hours to 15 minutes.",
-        "Architected microservice backend architecture using Docker and Traefik reverse proxy.",
-        "Transformed legacy monolithic application to cloud-agnostic microservice architecture. Eliminated vendor dependency.",
-        "Spearheaded the streamlining of 4 critical dependency management processes utilizing Docker containerization, leading to a 40% reduction in production errors and a 80% improvement in system uptime.",
-        "Led a 3-person backend team within an 8-person technical organization, overseeing the entire cloud infrastructure."
+        <>Engineered a <strong>Private Cloud</strong> ecosystem for a disaster assessment platform, implementing <strong>central authentication (SSO)</strong> via <strong>Keycloak</strong> to secure HashiCorp Vault, NextCloud, Mattermost, and OpenProject with unified access through a self-hosted dashboard.</>,
+        <>Designed an event-driven ML pipeline automating <strong>Python</strong> and <strong>Bash</strong> workflows via <strong>Docker Compose</strong> and <strong>RabbitMQ</strong>, decreasing manual operational time by <strong>90%</strong> and leveraging MinIO to replace legacy FTP access.</>,
+        <>Executed the migration of a legacy EC2 monolith to a <strong>cloud-agnostic microservices</strong> architecture on <strong>Akamai Cloud</strong>, utilizing <strong>Terraform</strong> and <strong>Ansible</strong> for fully automated provisioning.</>,
+        <>Architected a next-phase <strong>AWS Serverless</strong> solution (Amplify, AppSync, Lambda, Aurora Serverless) and migrated to <strong>Supabase</strong> as the backend platform, reducing development overhead and enabling the team to focus on the serverless migration.</>,
+        <>Proposed and designed a client-side data processing architecture using <strong>Rust</strong> compiled to <strong>WebAssembly (WASM)</strong>, enabling customers to process sensitive data locally in-browser while preserving data privacy.</>,
+        <>Established an automated delivery workflow where <strong>GitLab CI</strong> image builds trigger deployments via <strong>Ansible</strong> and <strong>Docker Compose</strong>, processed by a native runner on the deployment server.</>,
+        <>Engaged in <strong>product design and roadmap planning</strong> with stakeholders, translating customer requirements into technical solutions; led vendor negotiations securing <strong>$15k+ in service credits</strong> from AWS and Akamai.</>,
+        <>Built and managed a <strong>backend team of 3 developers</strong>, handling recruitment from screening to onboarding, mentoring on Serverless patterns, and conducting code reviews.</>,
+      ]
+    },
+    {
+      title: "Mentor & DevOps Specialist",
+      company: "Application Development Lifecycle Bootcamp",
+      location: "Torino, Italy",
+      duration: "Mar. 2026 - Present",
+      achievements: [
+        <>Co-organized an in-person bootcamp teaching the full <strong>application development lifecycle</strong> — from planning (<strong>Unified Process</strong>) through development, testing, and deployment — preparing students for intern and junior developer positions.</>,
+        <>Deliver hands-on sessions covering <strong>Linux</strong> fundamentals, <strong>Git</strong> version control, <strong>Docker</strong> containerization, and development workflow best practices.</>,
+        <>Design and teach backend and DevOps curriculum including <strong>FastAPI</strong> (with SQLAlchemy and Pydantic), <strong>PostgreSQL</strong>, <strong>GitLab CI/CD</strong>, S3-compatible object storage, and cloud compute fundamentals.</>,
+        <>Present the roles and responsibilities of backend and DevOps engineers, helping students understand how professional engineering teams operate in production environments.</>,
       ]
     }
   ];
@@ -81,21 +94,6 @@ const ExperienceSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Key Metrics Highlight */}
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-gray-200 dark:border-gray-700">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-marrsgreen dark:text-carrigreen">99.99%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">System Uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-marrsgreen dark:text-carrigreen">10x</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Performance Improvement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-marrsgreen dark:text-carrigreen">95%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Deployment Time Reduction</div>
-              </div>
-            </div>
           </div>
         ))}
       </div>

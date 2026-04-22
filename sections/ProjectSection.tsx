@@ -8,16 +8,10 @@ import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 import mecasProject from "public/projects/mecas.svg";
-import portfolioProject from "public/projects/portfolio-site.png";
-import GHPortfolio from "public/projects/ghp-portfolio.png";
-
 import goBillSplitter from "public/projects/go-bill-splitter-icon.svg";
 import snippetBox from "public/projects/snippetbox-flowchart.svg";
 import goServerTools from "public/projects/go-server-tools-flowchart.svg";
 
-// import automationProject from "public/projects/ai-automation-platform.webp";
-import automationProject from "public/projects/ai-automation-platform.svg";
-import devopsProject from "public/projects/devops.webp";
 
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
@@ -71,34 +65,7 @@ const ProjectSection: React.FC = () => {
 
 const projects = [
   {
-    title: "AI Image Processing Automation Platform",
-    type: "DevOps + Infrastructure",
-    image: (
-      <Image
-        src={automationProject}
-        sizes="100vw"
-        fill
-        alt="AI Processing Automation Platform"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Enterprise-level automation platform for AI image enhancement pipeline. Built interactive CLI for model selection, orchestrated multi-container workflows with RabbitMQ message queuing, and integrated MinIO S3 storage for processed images.",
-    tags: [
-      "Docker",
-      "RabbitMQ",
-      "MinIO S3",
-      "Bash",
-      "Python",
-      "Docker Compose",
-      "Message Queue",
-    ],
-    liveUrl: "", // Add if you have a demo video
-    codeUrl: "", // Add GitHub link if public
-    bgColor: "bg-[#FF6B6B]",
-    githubApi: "", // Add if public repo
-  },
-  {
-    title: "MECAS - Media Conversion Service",
+    title: "Multimedia Conversion",
     type: "Backend + DevOps",
     image: (
       <Image
@@ -109,7 +76,7 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "FastAPI-based REST API backend service for multimedia conversion and storage, supporting 5+ file formats with asynchronous processing, Docker containerization, and CI/CD pipelines.",
+    desc: "FastAPI-based REST API backend service for multimedia conversion and storage, supporting 5+ file formats with asynchronous processing, Docker containerization, and CI/CD pipelines. First experience building a production-grade async API.",
     tags: [
       "Python",
       "FastAPI",
@@ -136,7 +103,7 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc:"Interactive command-line DevOps tool for remote server management and automation. Features terminal user interface built with Bubble Tea framework, secure SSH connections, and efficient file transfer capabilities. Streamlines common server administration tasks through an intuitive CLI experience.", 
+    desc: "Interactive command-line DevOps tool for remote server management and automation. Features terminal user interface built with Bubble Tea framework, secure SSH connections, and efficient file transfer capabilities. Mastered Go interfaces and SSH protocol handling through this project.",
     tags: ["Go", "Bubble Tea", "SSH", "SCP", "CLI", "TUI"],
     liveUrl: "",
     codeUrl: "https://github.com/Soheil7799/go-server-tools",
@@ -155,7 +122,7 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Comprehensive web application demonstrating advanced Go web development patterns. Features secure user authentication, session management, and dynamic content rendering. Implements industry-standard security practices including CSRF protection, secure headers, and input validation.",
+    desc: "Comprehensive web application demonstrating advanced Go web development patterns. Features secure user authentication, session management, and dynamic content rendering. Learned Go web security patterns including CSRF protection, secure headers, and session management.",
     tags: ["Go", "net/http", "HTML", "CSS", "Go Templates", "PostgreSQL"],
     liveUrl: "",
     codeUrl: "https://github.com/Soheil7799/snippetbox",
@@ -174,76 +141,12 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Full-stack Go web application for splitting bills and managing shared expenses. Built with Gin framework for HTTP routing, GORM for database operations, and Go templates for dynamic HTML rendering. Features user management, expense calculation algorithms, and responsive web interface.",
+    desc: "Full-stack Go web application for splitting bills and managing shared expenses. Built with Gin framework for HTTP routing, GORM for database operations, and Go templates for dynamic HTML rendering. First full-stack Go project — learned ORM patterns and server-side templating.",
     tags: ["Go", "Gin", "GORM", "HTML", "CSS", "Go Templates", "SQLite"],
     liveUrl: "",
     codeUrl: "https://github.com/Soheil7799/go-bill-splitter",
     bgColor: "bg-[#9FD0E3]",
     githubApi: "https://api.github.com/repos/Soheil7799/go-bill-splitter",
-  },
-  {
-    title: "Portfolio Website",
-    type: "Frontend + Deployment",
-    image: (
-      <Image
-        src={portfolioProject}
-        sizes="100vw"
-        fill
-        alt="Portfolio Website"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Personal portfolio website built with NextJs static site generator and deployed on CloudFlare Pages. Features responsive design, YAML configuration, and modern web practices.",
-    tags: ["NextJs", "Cloud Flare Pages", "Responsive Design", "Static Site"],
-    liveUrl: "https://portfolio.shirvani.dev",
-    codeUrl: "https://github.com/Soheil7799/portfolio.shirvani.dev",
-    bgColor: "bg-[#8b5cf6]",
-    githubApi: "https://api.github.com/repos/Soheil7799/portfolio.shirvani.dev",
-  },
-  {
-    title: "GitHub Pages Portfolio",
-    type: "Frontend",
-    image: (
-      <Image
-        src={GHPortfolio}
-        sizes="100vw"
-        fill
-        alt="GitHub Pages Site"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Alternative portfolio website hosted directly on GitHub Pages. Demonstrates static site deployment and web development skills.",
-    tags: ["Hugo", "YAML", "GitHub Pages", "Responsive Design", "Static Site"],
-    liveUrl: "https://soheil7799.github.io",
-    codeUrl: "https://github.com/Soheil7799/Soheil7799.github.io",
-    bgColor: "bg-[#10b981]",
-    githubApi: "https://api.github.com/repos/Soheil7799/Soheil7799.github.io",
-  },
-  {
-    title: "DevOps & Backend Experience",
-    type: "Professional Experience",
-    image: (
-      <Image
-        src={devopsProject}
-        sizes="100vw"
-        fill
-        alt="DevOps Experience"
-        className="transition-transform duration-500 hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Professional experience with Linux administration, Docker containerization, CI/CD implementation with Jenkins and GitHub Actions. Reduced deployment time by 90% through automation.",
-    tags: [
-      "Linux",
-      "Docker",
-      "Bash",
-      "Shell Scripting",
-      "Jenkins",
-      "GitHub Actions",
-    ],
-    liveUrl: "",
-    codeUrl: "https://github.com/Soheil7799",
-    bgColor: "bg-[#FBFBFB]",
-    githubApi: "https://api.github.com/users/Soheil7799",
   },
 ];
 

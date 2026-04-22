@@ -19,40 +19,39 @@ const SkillsSection: React.FC = () => {
     }
   }, [skillsSection, onSectionChange]);
 
-  const technicalSkills = [
-    "Python, Go, Java, C",
-    "AWS (EC2, RDS, S3, CloudFront, ECR, Route53, Lambda, Fargate)",
-    "Docker & Containerization",
-    "Terraform & Infrastructure as Code",
-    "CI/CD (GitLab CI, Jenkins, GitHub Actions)",
-    "PostgreSQL, MongoDB, Redis, MariaDB",
-    "FastAPI, Gin, net/http, Express.js",
-    "Linux Administration & Bash Scripting",
-    "Microservices Architecture",
-    "Git & Version Control Best Practices",
-  ];
+  const technicalSkills: Record<string, string[]> = {
+    "Programming Languages": ["Python", "Go", "Rust", "Java", "C"],
+    "Cloud & DevOps": ["AWS (Lambda, Fargate, AppSync, Amplify, Aurora Serverless)", "Akamai Cloud", "Docker", "Terraform", "Ansible"],
+    "Security & Auth": ["HashiCorp Vault", "Keycloak", "AWS Cognito", "OpenID Connect"],
+    "Observability": ["AWS CloudWatch", "Prometheus", "Grafana", "Elasticsearch", "Logstash", "Kibana"],
+    "Databases & Storage": ["PostgreSQL", "MongoDB", "Redis", "MinIO"],
+    "CI/CD & Automation": ["GitLab CI", "GitHub Actions", "Jenkins", "n8n"],
+    "Backend & Infrastructure": ["RabbitMQ", "Supabase", "Hasura", "NginX", "Traefik"],
+    "Python Ecosystem": ["FastAPI", "Pydantic", "SQLAlchemy", "boto3", "Chalice", "Mangum"],
+    "Go Ecosystem": ["net/http", "Gin", "SCS", "Bubble Tea"],
+    "Tools & Systems": ["Git", "REST", "GraphQL", "Node.js", "Linux", "NixOS", "Bash"],
+    "Architecture": ["Microservices", "Serverless", "Agile/Scrum"],
+  };
 
   const softSkills = [
-    "Problem-Solving",
-    "Adaptability",
-    "Collaboration",
+    "Team Leadership",
+    "Mentoring & Teaching",
+    "Negotiation",
     "Communication",
-    "Teamwork",
-    "Patience",
-    "Resilience",
-    "Continuous Learning",
+    "Problem Solving",
+    "Initiative",
+    "Adaptability",
   ];
 
   const nextSteps = [
-    "Master Kubernetes for container orchestration",
-    "Explore advanced Terraform modules and state management",
-    "Deepen Ansible expertise for configuration management",
-    "Learn Apache Kafka for event streaming",
-    "Expand Azure cloud services knowledge",
-    "Advanced AWS serverless architectures",
-    "Contribute to cloud-native open source projects",
-    "Explore service mesh technologies (Istio, Linkerd)",
-    "Master observability tools (Prometheus, Grafana)",
+    "Kubernetes",
+    "Kafka",
+    "Azure",
+    "AWS X-Ray",
+    "AWS SageMaker",
+    "AI/ML",
+    "Embedded Systems",
+    "WASM",
   ];
 
   return (
@@ -77,39 +76,59 @@ const SkillsSection: React.FC = () => {
 
       <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
         {/* Technical Skills */}
-        <div className="bg-cardlight dark:bg-carddark p-6 rounded-lg shadow-lg">
+        <div className="md:col-span-2 bg-cardlight dark:bg-carddark p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold mb-4 text-marrsgreen dark:text-carrigreen">
             Technical Skills
           </h3>
-          <ul className="list-disc list-inside space-y-2">
-            {technicalSkills.map((skill) => (
-              <li key={skill}>{skill}</li>
+          <div className="space-y-4">
+            {Object.entries(technicalSkills).map(([category, skills]) => (
+              <div key={category}>
+                <span className="font-semibold text-sm text-gray-800 dark:text-gray-200">{category}</span>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
-        {/* Soft Skills */}
-        <div className="bg-cardlight dark:bg-carddark p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-marrsgreen dark:text-carrigreen">
-            Soft Skills
-          </h3>
-          <ul className="list-disc list-inside space-y-2">
-            {softSkills.map((skill) => (
-              <li key={skill}>{skill}</li>
-            ))}
-          </ul>
-        </div>
+        {/* Right column */}
+        <div className="space-y-8">
+          {/* Soft Skills */}
+          <div className="bg-cardlight dark:bg-carddark p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4 text-marrsgreen dark:text-carrigreen">
+              Soft Skills
+            </h3>
+            <ul className="list-disc list-inside space-y-2">
+              {softSkills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Next Steps */}
-        <div className="bg-cardlight dark:bg-carddark p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-marrsgreen dark:text-carrigreen">
-            Learning Roadmap
-          </h3>
-          <ul className="list-disc list-inside space-y-2">
-            {nextSteps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ul>
+          {/* Learning */}
+          <div className="bg-cardlight dark:bg-carddark p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4 text-marrsgreen dark:text-carrigreen">
+              Learning & Interests
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {nextSteps.map((step) => (
+                <span
+                  key={step}
+                  className="px-3 py-1 bg-marrsgreen/10 dark:bg-carrigreen/10 text-marrsgreen dark:text-carrigreen rounded-full text-sm font-medium"
+                >
+                  {step}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

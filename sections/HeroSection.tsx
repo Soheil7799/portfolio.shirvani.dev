@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
         aria-hidden="true"
         className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
       >
-        DEVOPS ENGINEER AUTOMATION INFRASTRUCTURE PYTHON DOCKER KUBERNETES
+        DEVOPS CLOUD ENGINEER AUTOMATION INFRASTRUCTURE SERVERLESS DOCKER TERRAFORM
       </span>
 
       <div className="image-animation z-10 select-none mt-0 xs:mt-6 sm:mt-14 lg:mt-0 px-0 mx-auto lg:p-0 lg:basis-1/3">
@@ -129,18 +129,17 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="overflow-hidden">
           <span className="text-animation text-xl md:text-2xl lg:text-4xl block md:my-3 text-marrsgreen dark:text-carrigreen font-medium">
-            A DevOps / Backend Developer
+            A DevOps / Cloud Engineer
           </span>
         </div>
         <div className="mt-2 my-4 md:mb-8">
           <p className="mb-1">
-          I am a DevOps Engineer and Backend Developer specializing in cloud infrastructure automation and backend development.
+          DevOps/Cloud Engineer with expertise in cloud architecture and infrastructure automation.
           </p>
           <p>
-          I lead cloud infrastructure teams, design scalable AWS architectures, and implement CI/CD pipelines that reduce deployment times from hours to minutes.
-          </p>
-          <p>
-          As Cloud Architect at StarView, I supervise infrastructure achieving 99.99% system uptime.
+          Proven track record of orchestrating cloud infrastructure and reducing manual operational toil
+          through CI/CD and serverless solutions. Experienced in managing hybrid cloud migrations,
+          securing strategic vendor partnerships, and capable of contributing to backend development when needed.
           </p>
         </div>
         <div>
