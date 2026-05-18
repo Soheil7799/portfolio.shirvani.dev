@@ -1,398 +1,410 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import { Icon } from 'astro-icon/components';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import SkillsChips from '~/components/widgets/SkillsChips.astro';
+import ContactForm from '~/components/widgets/ContactForm.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
+  title: 'Mostafa Shirvani — DevOps / Cloud Engineer',
+  description:
+    'Early DevOps hire at an Italian startup. Platform migration, security incident response, and vendor strategy. Career switcher from Mining Engineering.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <Fragment slot="announcement">
+    <Announcement />
+  </Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'About', href: '#about' },
+        { text: 'Experience', href: '#experience' },
+        { text: 'Education', href: '#education' },
+        { text: 'Skills', href: '#skills' },
+        { text: 'Projects', href: '#projects' },
+        { text: 'GitHub', href: 'https://github.com/Soheil7799' },
+      ]}
+      actions={[
+        {
+          text: 'Get in touch',
+          href: '#contact',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+      position="right"
+    />
+  </Fragment>
 
-  <Hero
+  <!-- Hero ********************************************************* -->
+  <Hero2
+    id="hero"
+    title="Mostafa Shirvani"
+    tagline="DevOps / Cloud Engineer · Torino, Italy"
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', text: 'Download CV', href: '/Mostafa-Shirvani_CV.pdf', target: '_blank' },
+      { text: 'Get in touch', href: '#contact' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro v6</span> + Tailwind CSS
-    </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro v6 +
-        Tailwind CSS v4.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages & Blogs.
+      First DevOps hire at an Italian startup. Platform migrations, security incident response,
+      vendor strategy. Career switcher from Mining Engineering — composure under pressure included.
     </Fragment>
-  </Hero>
+    <Fragment slot="image">
+      <div class="mx-auto lg:mx-0 lg:ml-auto w-full max-w-md">
+        <div class="rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 shadow-xl overflow-hidden">
+          <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-300 dark:border-slate-700 bg-slate-200 dark:bg-slate-800">
+            <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
+            <span class="text-xs font-mono text-slate-500 dark:text-slate-400 ml-2">~/mostafa@torino</span>
+          </div>
+          <pre class="p-4 font-mono text-sm text-slate-700 dark:text-slate-200 leading-relaxed whitespace-pre-wrap m-0"><span class="text-amber-600 dark:text-amber-400">$</span> whoami
+devops-engineer
+<span class="text-amber-600 dark:text-amber-400">$</span> cat stack.txt
+python · go · aws · akamai · docker
+terraform · postgres · k8s (learning)
+<span class="text-amber-600 dark:text-amber-400">$</span> uptime
+11 months at StarView, 0 prod fires
+<span class="text-amber-600 dark:text-amber-400">$</span> open --to-recruiters
+<span class="inline-block w-2 h-4 bg-slate-700 dark:bg-slate-200 align-middle animate-pulse"></span></pre>
+        </div>
+      </div>
+    </Fragment>
+  </Hero2>
 
-  <!-- Note Widget ******************* -->
-
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023, 2024 and 2025."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility. Now powered by Tailwind CSS v4.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS v4 ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
+  <!-- About ******************************************************** -->
   <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro v6',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS v4',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
+    id="about"
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: '/avatar.png',
+      alt: 'Mostafa Shirvani',
+      loading: 'eager',
+      class: 'mx-auto rounded-full bg-gray-500 shadow-lg w-72 h-72 sm:w-80 sm:h-80 object-cover',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <p>
+        I'm a DevOps engineer in Torino, Italy, working at a B2B damage assessment startup
+        (DisasterLens) where I joined as the first dedicated DevOps hire. I own everything from
+        infrastructure migrations to security incident response to vendor partnerships — small
+        startup, big surface area.
+      </p>
+      <br />
+      <p>
+        I came into tech from Mining Engineering. I finished my first degree at the University of
+        Tehran in early 2022 and moved to Italy to start Computer Engineering at Politecnico di
+        Torino. Years of demanding fieldwork taught me to keep my head when systems break and
+        customers are looking — something that paid off twice when our platform was attacked (once
+        successfully, once not, thanks to architecture that learned its lesson).
+      </p>
+      <br />
+      <p>
+        Earlier this year I co-taught a 3-month application development bootcamp. In my spare time
+        I'm learning Rust, running NixOS on my own machine, and tinkering with infrastructure for
+        the fun of it.
+      </p>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="https://github.com/Soheil7799"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-amber-500 dark:hover:border-amber-400 hover:bg-amber-50 dark:hover:bg-amber-500/10 hover:text-amber-700 dark:hover:text-amber-300 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+        >
+          <Icon name="tabler:brand-github" class="w-5 h-5" />
+          <span class="font-medium">GitHub</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mostafa-shirvani/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-amber-500 dark:hover:border-amber-400 hover:bg-amber-50 dark:hover:bg-amber-500/10 hover:text-amber-700 dark:hover:text-amber-300 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+        >
+          <Icon name="tabler:brand-linkedin" class="w-5 h-5" />
+          <span class="font-medium">LinkedIn</span>
+        </a>
+        <a
+          href="mailto:MostafaShirvani1999@gmail.com"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-amber-500 dark:hover:border-amber-400 hover:bg-amber-50 dark:hover:bg-amber-500/10 hover:text-amber-700 dark:hover:text-amber-300 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+        >
+          <Icon name="tabler:mail" class="w-5 h-5" />
+          <span class="font-medium">Email</span>
+        </a>
+        <a
+          href="/Mostafa-Shirvani_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-amber-500 dark:border-amber-400 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-500/20 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+        >
+          <Icon name="tabler:file-download" class="w-5 h-5" />
+          <span class="font-medium">CV (PDF)</span>
+        </a>
+      </div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
+  <!-- Work Experience ********************************************** -->
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    id="experience"
+    title="Work experience"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+        title:
+          'DevOps / Cloud Engineer <br /> <span class="font-normal">StarView (Early DevOps Hire) — B2B Damage Assessment Platform · Torino, Italy</span> <br /> <span class="text-sm font-normal">Jun. 2025 - Present</span>',
+        description: `Migrated DisasterLens (V1 → V2) from a legacy EC2 monolith to a cloud-agnostic Akamai (Linode) static-CDN deployment with Terraform + Ansible — 9× faster builds (8m → 55s), ~25% faster DB queries, and near-zero hosting cost.
+        <br /><br />
+        Led incident response to a production breach via Next.js "React2Shell" (CVE-2025-55182, Dec. 2025) — removed the injected cryptominer mid-customer-engagement, rebuilt the server, and re-architected with Docker service isolation. The next exploit attempt was contained automatically — remediation took only a software update.
+        <br /><br />
+        Designed an event-driven ML pipeline in Docker Compose + RabbitMQ, cutting manual operations by 90%. Built a Private Cloud with SSO via Keycloak securing 4 self-hosted services. Represented StarView at industry events (Corley &amp; AWS Italy, Akamai partner meetings) — sourced $15k+ in service credits. Mentored 3 backend developers on Serverless patterns.`,
+        icon: 'tabler:server-cog',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+        title:
+          'Backend &amp; DevOps Instructor <br /> <span class="font-normal">Application Development Lifecycle Bootcamp · Torino, Italy</span> <br /> <span class="text-sm font-normal">Mar. 2026 - May 2026</span>',
+        description: `Co-organized a 3-month full-stack development bootcamp preparing 5 intern/junior candidates for entry-level positions. Taught backend (FastAPI + SQLAlchemy + Pydantic, PostgreSQL), DevOps fundamentals (Docker, GitLab CI/CD, Linux + Git), and the full application development lifecycle.
+        <br /><br />
+        Built an interactive <strong>Git workshop tool</strong> — a Python CLI/TUI that scaffolds 24 hands-on exercises across 5 parts (foundational ops, history navigation, branching/merging, distributed workflows, history modification). Used in the bootcamp; published openly on GitHub.
+        <br /><br />
+        <a href="https://github.com/Soheil7799/workshop-git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-amber-500/40 dark:border-amber-400/40 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 font-semibold hover:bg-amber-100 dark:hover:bg-amber-500/20 hover:border-amber-500 dark:hover:border-amber-400 transition-colors text-sm">Open the workshop on GitHub <span aria-hidden="true">→</span></a>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Education **************************************************** -->
+  <Steps
+    id="education"
+    title="Education"
+    items={[
+      {
+        title:
+          'B.Sc. Computer Engineering <br /> <span class="font-normal">Politecnico di Torino</span> <br /> <span class="text-sm font-normal">Oct. 2022 - Jun. 2027 (Expected)</span>',
+        description: `30L/30 (with honors) in Cybersecurity and National Defence · 30/30 in Music and Multimedia Streaming (the course behind my MECAS project). Coursework: Operating Systems, Computer Networks, Databases, Algorithms, OOP, Computer Architecture.`,
+        icon: 'tabler:school',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+        title:
+          'B.Sc. Mining Engineering <br /> <span class="font-normal">University of Tehran</span> <br /> <span class="text-sm font-normal">Oct. 2017 - Jan. 2022</span>',
+        description: `Field internships across demanding mining operations. Learned stakeholder negotiation and composure under pressure that I now apply to production-incident response.`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Skills ******************************************************* -->
+  <SkillsChips
+    id="skills"
+    title="Technical Skills"
+    subtitle="What I use day-to-day. Each item is something I can speak to in interview detail."
+    groups={[
+      {
+        label: 'Languages & Frameworks',
+        items: [
+          'Python',
+          'FastAPI',
+          'Pydantic',
+          'SQLAlchemy',
+          'boto3',
+          'NumPy',
+          'SciPy',
+          'Go',
+          'net/http',
+          'Gin',
+          'GORM',
+          'Bubble Tea',
+        ],
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        label: 'Cloud & Infrastructure',
+        items: ['AWS', 'Akamai Cloud', 'Digital Ocean', 'Docker', 'Terraform', 'Ansible', 'NginX', 'Traefik'],
+      },
+      {
+        label: 'CI/CD & Observability',
+        items: ['GitLab CI', 'GitHub Actions', 'Jenkins', 'Prometheus', 'Grafana', 'Sentry'],
+      },
+      {
+        label: 'Data, Messaging & Auth',
+        items: [
+          'PostgreSQL',
+          'Redis',
+          'MinIO',
+          'S3',
+          'R2',
+          'RabbitMQ',
+          'Supabase',
+          'HashiCorp Vault',
+          'Keycloak',
+          'OpenID Connect',
+        ],
+      },
+      {
+        label: 'Tools, Systems & Architecture',
+        items: ['Git', 'REST', 'Linux', 'NixOS', 'Bash', 'Microservices', 'Serverless', 'Agile/Scrum'],
+      },
+      {
+        label: 'Currently learning',
+        items: ['Rust', 'Kubernetes (CKA)', 'Kafka', 'Azure', 'AI/ML', 'WASM'],
+      },
+    ]}
+  />
+
+  <!-- Projects ***************************************************** -->
+  <Content
+    id="projects"
+    title="Selected Projects"
+    subtitle="A mix of academic-final-project depth and side-project breadth."
+    isReversed
+    items={[
+      {
+        title: 'Stack:',
+        description: 'FastAPI · SciPy + NumPy DSP · FFmpeg · Docker Compose · GitHub Actions → AWS',
+      },
+      {
+        title: 'Highlights:',
+        description:
+          'Modular layout across 4 packages (api, filters, formatings, frontend) with browser drag-and-drop and real-time filter parameter control. Final project for the Music and Multimedia Streaming course (graded 30/30).',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: '/projects/mecas.svg',
+      alt: 'MECAS architecture diagram',
+      width: 900,
+      height: 600,
     }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS v4"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'View on GitHub',
+      icon: 'tabler:chevron-right',
+      href: 'https://github.com/Soheil7799/mecas-service',
+    }}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        MECAS — Media Conversion &amp; Streaming Service
+      </h3>
+      <p>
+        FastAPI service for audio/video processing — SciPy + NumPy audio DSP (gain compression,
+        voice enhancement, noise reduction) and FFmpeg video pipelines (grayscale, color inversion,
+        frame interpolation, upscaling) across MP4/AVI/MOV up to 200MB.
+      </p>
     </Fragment>
-  </Features2>
+  </Content>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- Compact 2-up grid for smaller side projects ------------------- -->
+  <section class="px-4 pb-16 sm:px-6 mx-auto max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-6">
+      <a
+        href="https://github.com/Soheil7799/go-server-tools"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block group rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-6 hover:border-amber-500 dark:hover:border-amber-400 transition-colors"
+      >
+        <h3
+          class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors"
+        >
+          Go Server Management Tool
+        </h3>
+        <p class="font-mono text-xs text-slate-500 dark:text-slate-400 mb-3">
+          Go · Bubble Tea TUI · YAML config · ssh / rsync
+        </p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 mb-4">
+          CLI with a TUI for picking servers and SSH keys from a YAML config, then dispatching ssh
+          and rsync commands. Clean <code class="text-xs">cmd/internal</code> layout. Built to
+          scratch my own itch managing multiple servers.
+        </p>
+        <span class="text-sm text-amber-700 dark:text-amber-400 font-medium">View on GitHub →</span>
+      </a>
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro v6 + Tailwind CSS v4.
-                        Astro is a very interesting technology. Thanks.
-                `}
+      <a
+        href="https://github.com/Soheil7799/snippetbox"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block group rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-6 hover:border-amber-500 dark:hover:border-amber-400 transition-colors"
+      >
+        <h3
+          class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors"
+        >
+          SnippetBox Web App
+        </h3>
+        <p class="font-mono text-xs text-slate-500 dark:text-slate-400 mb-3">
+          Go · net/http · SCS · bcrypt · PostgreSQL
+        </p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 mb-4">
+          Full-stack Go web app following Alex Edwards&apos;s <em>Let&apos;s Go</em> book. A
+          hands-on intro to Go&apos;s web stack and security patterns (CSRF protection, secure
+          headers, session management).
+        </p>
+        <span class="text-sm text-amber-700 dark:text-amber-400 font-medium">View on GitHub →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact / CTA ************************************************ -->
+  <ContactForm
+    id="contact"
+    title="Let's build something"
+    subtitle="Open to DevOps / Cloud Engineering roles in the EU. Drop a message below or email me directly."
+    endpoint="https://formspree.io/f/xjkwdzbq"
+    emailFallback="MostafaShirvani1999@gmail.com"
   />
 
-  <!-- FAQs Widget ******************* -->
+  <script>
+    // Active section indicator: highlight the nav link for whichever section is
+    // currently in the upper portion of the viewport.
+    const sections = document.querySelectorAll<HTMLElement>('[id="about"], [id="experience"], [id="education"], [id="skills"], [id="projects"], [id="contact"]');
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>('header nav a[href^="#"]');
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+    const linkMap = new Map<string, HTMLAnchorElement>();
+    navLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        linkMap.set(href.substring(1), link);
+      }
+    });
 
-  <!-- Stats Widget ****************** -->
+    const ACTIVE_CLASSES = ['text-accent', 'font-bold'];
 
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
+    const clearActive = () => {
+      linkMap.forEach((link) => link.classList.remove(...ACTIVE_CLASSES));
+    };
 
-  <!-- CallToAction Widget *********** -->
+    if (sections.length && linkMap.size) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // Pick the visible entry with the largest intersection ratio
+          const visible = entries.filter((e) => e.isIntersecting);
+          if (visible.length === 0) return;
+          const best = visible.reduce((a, b) =>
+            a.intersectionRatio > b.intersectionRatio ? a : b
+          );
+          const id = (best.target as HTMLElement).id;
+          const link = linkMap.get(id);
+          if (link) {
+            clearActive();
+            link.classList.add(...ACTIVE_CLASSES);
+          }
+        },
+        {
+          // Section must be in the upper-middle band of the viewport
+          rootMargin: '-30% 0px -55% 0px',
+          threshold: [0, 0.25, 0.5, 0.75, 1],
+        }
+      );
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+      sections.forEach((s) => observer.observe(s));
+    }
+  </script>
+</Layout>
 </Layout>

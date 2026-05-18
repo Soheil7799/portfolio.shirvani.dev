@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none" aria-label="Mostafa Shirvani mark">
+  <!-- Tail / flame rising from the center of the infinity, amber -->
+  <g>
+    <path
+      d="M 160 92
+         C 152 70 140 50 130 28
+         C 138 48 148 62 156 84 Z"
+      fill="#F59E0B" />
+    <path
+      d="M 160 92
+         C 168 70 180 50 190 28
+         C 182 48 172 62 164 84 Z"
+      fill="#F59E0B" />
+    <!-- subtle inner highlight for depth -->
+    <path
+      d="M 160 92 L 158 70 L 162 70 Z"
+      fill="#FBBF24" opacity="0.7" />
+  </g>
+
+  <!-- Infinity loop, slate (light mode) / will be overridden via CSS class for dark -->
+  <path
+    d="M 70 140
+       C 28 140, 28 88, 86 100
+       C 130 110, 150 140, 160 140
+       C 170 140, 190 110, 234 100
+       C 292 88, 292 140, 250 140
+       C 190 140, 170 100, 160 100
+       C 150 100, 130 140, 70 140 Z"
+    fill="#475569" />
+
+  <!-- Soft inner highlight on infinity for subtle 3D feel -->
+  <path
+    d="M 70 130
+       C 40 130, 40 100, 86 108
+       C 120 115, 145 132, 160 132
+       C 175 132, 200 115, 234 108
+       C 280 100, 280 130, 250 130
+       C 200 130, 175 108, 160 108
+       C 145 108, 120 130, 70 130 Z"
+    fill="#64748B" opacity="0.5" />
+</svg>

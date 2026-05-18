@@ -1,30 +1,30 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Mostafa Shirvani
+  site: 'https://mostafa.shirvani.dev'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: ''
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Mostafa Shirvani — DevOps / Cloud Engineer
+    template: '%s — Mostafa Shirvani'
+  description: 'Early DevOps hire at an Italian startup. Platform migration, security incident response, and vendor strategy. Career switcher from Mining Engineering.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Mostafa Shirvani
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false # Re-enable when you want to migrate the old blog posts; remember to move src/pages/_disabled/[...blog] back to src/pages/
     postsPerPage: 6
 
     post:

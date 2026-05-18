@@ -1,0 +1,78 @@
+---
+interface Group {
+  label: string;
+  items: string[];
+}
+
+interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  groups: Group[];
+}
+
+const { id, title, subtitle, groups } = Astro.props;
+---
+
+<section id={id} class="px-4 py-16 sm:px-6 lg:py-20 mx-auto max-w-6xl">
+  {
+    (title || subtitle) && (
+      <div class="mb-10 md:mx-auto text-center md:max-w-4xl md:mb-12">
+        {title && (
+          <h2 class="text-3xl md:text-4xl font-bold leading-tighter tracking-tighter font-heading mb-4 dark:text-white">
+            {title}
+          </h2>
+        )}
+        {subtitle && <p class="text-xl text-muted dark:text-slate-300">{subtitle}</p>}
+      </div>
+    )
+  }
+  <div class="space-y-6 skills-grid">
+    {
+      groups.map((group, gIdx) => (
+        <div
+          class="skills-row group/row flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+          style={`--row-delay: ${gIdx * 60}ms;`}
+        >
+          <div class="sm:w-48 shrink-0 flex items-center pt-1">
+            <span
+              class="row-bar inline-block w-1 h-4 mr-2 bg-amber-500 dark:bg-amber-400 rounded-full opacity-60 transition-all duration-300 group-hover/row:opacity-100 group-hover/row:h-6"
+              aria-hidden="true"
+            />
+            <span class="text-sm font-semibold text-muted dark:text-slate-300 group-hover/row:text-slate-900 dark:group-hover/row:text-slate-100 transition-colors">
+              {group.label}
+            </span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {group.items.map((item, iIdx) => (
+              <span
+                class="chip inline-flex items-center px-3 py-1 rounded-md text-sm bg-slate-100 dark:bg-slate-800/70 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-amber-500 dark:hover:border-amber-400 hover:bg-white dark:hover:bg-slate-700 hover:text-amber-700 dark:hover:text-amber-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+                style={`--chip-delay: ${iIdx * 25}ms;`}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  /* Subtle stagger on entrance for chips inside a row that has just intersected */
+  @media (prefers-reduced-motion: no-preference) {
+    .skills-row.intersect-once .chip {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: chip-in 360ms ease-out forwards;
+      animation-delay: calc(var(--row-delay, 0ms) + var(--chip-delay, 0ms));
+    }
+    @keyframes chip-in {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+</style>

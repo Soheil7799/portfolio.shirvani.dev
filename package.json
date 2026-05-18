@@ -1,9 +1,11 @@
 {
-  "name": "@onwidget/astrowind",
-  "version": "1.0.0-beta.62",
-  "description": "AstroWind: A free template using Astro 6 and Tailwind CSS v4. Astro starter theme.",
+  "name": "shirvani-portfolio",
+  "version": "1.0.0",
+  "description": "Mostafa Shirvani — personal portfolio. Built on Astro + AstroWind template.",
   "type": "module",
   "private": true,
+  "author": "Mostafa Shirvani <MostafaShirvani1999@gmail.com>",
+  "homepage": "https://mostafa.shirvani.dev",
   "engines": {
     "node": ">=22.12.0"
   },
